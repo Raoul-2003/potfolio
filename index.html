@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOFFI N’GUESSAN RAOUL | Portfolio</title>
+    <link rel="shortcut icon" href="image.png" type="image/png">
+    <meta name="description"
+        content="Portfolio de KOFFI N’GUESSAN RAOUL - Étudiant en Électronique, Informatique & Télécommunications | Développeur Web">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --accent: #3B82F6;
+            --text: #FFFFFF;
+            --text-secondary: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0F172A 0%, #1E2937 100%);
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563EB;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent);
+            color: white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 8px solid var(--accent);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+            object-fit: cover;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* À PROPOS */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* COMPÉTENCES */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: #1E2937;
+            padding: 2rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .skill-card h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        /* PROJETS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #1E2937;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px -12px rgb(59 130 246 / 0.25);
+        }
+
+        .project-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        /* EXPÉRIENCES & FORMATION */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #334155;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 22px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid #0F172A;
+        }
+
+        /* DOCUMENTS */
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .doc-card {
+            background: #1E2937;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .doc-card:hover {
+            background: #334155;
+        }
+
+        /* CONTACT */
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #1E2937;
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px 20px;
+            background: #0F172A;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0A1321;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.6rem;
+            margin: 0 15px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0F172A;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.6rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Project Filters */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 24px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--text);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Modal Gallery */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #1E2937;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            padding-right: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-video {
+            width: 100%;
+            border-radius: 12px;
+            background: #000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">RAOUL<span style="color:#3B82F6;">.</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h2 class="subtitle">Bonjour, je suis</h2>
+                    <h1>KOFFI N’GUESSAN RAOUL</h1>
+                    <p class="subtitle">Étudiant en Électronique, Informatique & Télécommunications</p>
+                    <p>Passionné par le développement web et la conception de systèmes intelligents.</p>
+
+                    <div style="margin-top: 2.5rem;">
+                        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                        <a href="KOFFI%20RAOUL%20CV.pdf" download class="btn btn-outline">Télécharger mon CV</a>
+                    </div>
+
+                    <div style="margin-top: 3rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div>
+                            <strong style="color: var(--accent);">INP-HB</strong><br>
+                            <span style="color: var(--text-secondary);">Yamoussoukro, Côte d'Ivoire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image fade-in">
+                    <img src="image.png" alt="KOFFI N’GUESSAN RAOUL" class="avatar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos">
+        <div class="container">
+            <h2 class="section-title fade-in">À propos de moi</h2>
+            <div class="about-grid">
+                <div class="fade-in">
+                    <img src="image.png" alt="Photo de profil"
+                        style="width:100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); object-fit: cover; aspect-ratio: 4/5;">
+                </div>
+                <div class="fade-in">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Étudiant motivé et passionné</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary);">
+                        Actuellement en <strong>2ème année EIT</strong> à l'Institut National Polytechnique
+                        Houphouët-Boigny (INP-HB), je suis à la recherche d'un stage d'application dans les domaines de
+                        l'électronique, de l'informatique et des télécommunications.
+                    </p>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); margin-top: 1.5rem;">
+                        J'allie compétences techniques en électronique et en développement web pour créer des solutions
+                        innovantes et performantes. Je suis particulièrement intéressé par les systèmes intelligents et
+                        les interfaces utilisateur intuitives.
+                    </p>
+
+                    <div style="margin-top: 2.5rem;">
+                        <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences" style="background: #1E2937;">
+        <div class="container">
+            <h2 class="section-title fade-in">Compétences</h2>
+            <div class="skills-container">
+                <!-- Informatique -->
+                <div class="skill-card fade-in">
+                    <h3><i class="fas fa-laptop-code"></i> Informatique</h3>
+                    <div class="skill-item"><span>Dev Web (PHP/MySQL, HTML/CSS)</span><span
+                            style="color:#3B82F6;">Avancé</span></div>
+                    <div class="skill-item"><span>JS Avancé (ReactJS, NodeJS)</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                    <div class="skill-item"><span>Python Avancé (Django)</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                    <div class="skill-item"><span>SGBD (MySQL / PostgreSQL)</span><span
+                            style="color:#3B82F6;">Avancé</span></div>
+                    <div class="skill-item"><span>Système Linux & Cloud</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                </div>
+
+                <!-- Électronique -->
+                <div class="skill-card fade-in">
+                    <h3><i class="fas fa-microchip"></i> Électronique</h3>
+                    <div class="skill-item"><span>Électronique Programmable </span><span
+                            style="color:#3B82F6;">Avancé</span></div>
+                    <div class="skill-item"><span>Internet des Objets (IoT)</span><span
+                            style="color:#3B82F6;">Avancé</span></div>
+                    <div class="skill-item"><span>Sécurité Électronique</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                    <div class="skill-item"><span>Robotique & Automatismes</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                    <div class="skill-item"><span>Asservissement Linéaire</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                </div>
+
+                <!-- Télécommunications -->
+                <div class="skill-card fade-in">
+                    <h3><i class="fas fa-network-wired"></i> Télécoms & Réseaux</h3>
+                    <div class="skill-item"><span>Réseaux Informatiques </span><span
+                            style="color:#3B82F6;">Avancé</span></div>
+                    <div class="skill-item"><span>Réseaux Optiques</span><span
+                            style="color:#3B82F6;">Intermédiaire</span></div>
+                    <div class="skill-item"><span>Maintenance Réseaux</span><span style="color:#3B82F6;">Avancé</span>
+                    </div>
+                </div>
+
+                <!-- Techniques (CV) -->
+                <div class="skill-card fade-in">
+                    <h3><i class="fas fa-cogs"></i> Outils & Frameworks</h3>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px;">
+                        <strong>Logiciels et outils électroniques</strong>
+                    </div>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px;">
+                        <strong>Langages de programmation :</strong>
+                        <span style="color:var(--text-secondary);">C, Python, JavaScript</span>
+                    </div>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px;">
+                        <strong>Bases de données :</strong>
+                        <span style="color:var(--text-secondary);">SQL, MySQL</span>
+                    </div>
+                    <div class="skill-item"
+                        style="flex-direction: column; align-items: flex-start; gap: 5px; border-bottom: none;">
+                        <strong>Framework :</strong>
+                        <span style="color:var(--text-secondary);">Angular, Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills (CV) -->
+                <div class="skill-card fade-in">
+                    <h3><i class="fas fa-users"></i> Soft Skills & Bureautique</h3>
+                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px;">
+                        <strong>Logiciels bureautiques :</strong>
+                        <span style="color:var(--text-secondary);">Microsoft Word, Excel, PowerPoint</span>
+                    </div>
+                    <div class="skill-item"
+                        style="flex-direction: column; align-items: flex-start; gap: 5px; border-bottom: none;">
+                        <strong>Soft skills :</strong>
+                        <span style="color:var(--text-secondary); line-height: 1.5;">Travail en équipe, autonomie,
+                            résolution de problèmes, apprentissage rapide</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets">
+        <div class="container">
+            <h2 class="section-title fade-in">Projets Réalisés</h2>
+
+            <div class="project-filters fade-in">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="info">Informatique</button>
+                <button class="filter-btn" data-filter="elec">Électronique</button>
+                <button class="filter-btn" data-filter="telecom">Télécoms</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card fade-in" data-category="info">
+                    <div class="project-img" style="background-image: url('platforme/p3.jpg')">
+                    </div>
+                    <div class="project-content">
+                        <h3>Plateforme de Transfert d'Argent</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Application web complète avec
+                            authentification, historique et interface utilisateur moderne.</p>
+                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, PHP</p>
+                        <a href="javascript:void(0)" onclick="ouvrirProjet('platforme')" class="btn btn-primary"
+                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card fade-in" data-category="elec">
+                    <div class="project-img" style="background-image: url('project_caddy.png')">
+                    </div>
+                    <div class="project-content">
+                        <h3>Caddy Intelligent</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Chariot de supermarché autonome avec
+                            détection d'objets et calcul automatique du total.</p>
+                        <p><strong>Technologies :</strong> Arduino,Raspberry pi, Capteurs, Électronique</p>
+                        <a href="javascript:void(0)"
+                            onclick="alert('Images non disponibles pour ce projet pour le moment.')"
+                            class="btn btn-primary"
+                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card fade-in" data-category="elec">
+                    <div class="project-img" style="background-image: url('project_poubelle.png')">
+                    </div>
+                    <div class="project-content">
+                        <h3>Poubelle Intelligente</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Système de tri automatique des déchets
+                            avec notification via application.</p>
+                        <p><strong>Technologies :</strong> Microcontrôleurs, Capteurs ultrason</p>
+                        <a href="javascript:void(0)" onclick="ouvrirProjet('poubelle')" class="btn btn-primary"
+                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet 4 : SuperGest -->
+                <div class="project-card fade-in" data-category="info">
+                    <div class="project-img"
+                        style="background-image: url('project_supert.png'); background-size: cover; background-position: center top;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Application SuperGest</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Système complet de gestion de stock,
+                            ventes et administration avec tableau de bord interactif.</p>
+                        <p><strong>Technologies :</strong> HTML, CSS, PHP, PostgreSQL, JavaScript</p>
+                        <div style="display: flex; gap: 10px; margin-top: 1rem;">
+                            <a href="javascript:void(0)" onclick="ouvrirProjet('supert')" class="btn btn-outline"
+                                style="font-size: 0.95rem; padding: 10px 15px; flex: 1; text-align: center; margin: 0;">Images</a>
+                            <a href="https://supert.page.gd" target="_blank" class="btn btn-primary"
+                                style="font-size: 0.95rem; padding: 10px 15px; flex: 2; text-align: center; margin: 0;"><i
+                                    class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Visiter le site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 7 : Gnote -->
+                <div class="project-card fade-in" data-category="info">
+                    <div class="project-img"
+                        style="background-image: url('project_gnote.png'); background-size: cover; background-position: center top;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Application Gnotev</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Plateforme de gestion scolaire et
+                            universitaire (notes, étudiants, professeurs).</p>
+                        <p><strong>Technologies :</strong> PHP, HTML, CSS, MySQL</p>
+                        <div style="display: flex; gap: 10px; margin-top: 1rem;">
+                            <a href="javascript:void(0)" onclick="ouvrirProjet('gnote')" class="btn btn-outline"
+                                style="font-size: 0.95rem; padding: 10px 15px; flex: 1; text-align: center; margin: 0;">Images</a>
+                            <a href="https://gnote.gamer.gd" target="_blank" class="btn btn-primary"
+                                style="font-size: 0.95rem; padding: 10px 15px; flex: 2; text-align: center; margin: 0;"><i
+                                    class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Visiter le site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card fade-in" data-category="telecom">
+                    <div class="project-img"
+                        style="background-image: url('telecom/sim_1.png'); background-position: center; background-size: cover;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Simulation de Réseau Informatique</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Modélisation et simulation d'une
+                            architecture de réseau informatique avec analyse de performance.</p>
+                        <p><strong>Technologies :</strong> Cisco Packet Tracer, Réseaux</p>
+                        <a href="javascript:void(0)" onclick="ouvrirProjet('telecom')" class="btn btn-primary"
+                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet Raspberry Pi -->
+                <div class="project-card fade-in" data-category="elec">
+                    <div class="project-img"
+                        style="background-image: url('raspberry/r1.jpg'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Projet Raspberry Pi</h3>
+                        <p style="color: var(--text-secondary); margin: 12px 0;">Conception et réalisation d'un système
+                            intelligent basé sur Raspberry Pi.</p>
+                        <p><strong>Technologies :</strong> Raspberry Pi, Python, Électronique</p>
+                        <a href="javascript:void(0)" onclick="ouvrirProjet('raspberry')" class="btn btn-primary"
+                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPÉRIENCES -->
+    <section id="experiences" style="background: #1E2937;">
+        <div class="container">
+            <h2 class="section-title fade-in">Expériences Professionnelles</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Stage de découverte - Mandigo SARL Bouaké</h3>
+                    <p style="color: var(--accent);">JUILLET 2025 - AOÛT 2025</p>
+                    <p style="color: var(--text-secondary);">Réalisation de projet</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Stage de fin de cycle - JPH Electronique Bouaké</h3>
+                    <p style="color: var(--accent);">DÉCEMBRE 2023 - JANVIER 2024</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-secondary);">
+                        <li>Maintenance des équipements électroniques</li>
+                        <li>Diagnostic et réparation de pannes</li>
+                        <li>Participation aux installations techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMATION -->
+    <section id="formation">
+        <div class="container">
+            <h2 class="section-title fade-in">Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>2-ème année Électronique, Informatique et télécoms</h3>
+                    <p style="color: var(--accent);">ECOLE SUPÉRIEURE D'INDUSTRIE À INP-HB • 2025-2026</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Attestation de Formation campus citoyen</h3>
+                    <p style="color: var(--accent);">JUILLET 2025</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Tronc commun en Science et technologie de l'Information et de la communication</h3>
+                    <p style="color: var(--accent);">ECOLE SUPÉRIEURE D'INDUSTRIE À INP-HB • 2024-2025</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Brevet de Technicien (BT) en Electronique <span style="color:#eab308;">🏆 LAURÉAT
+                            RÉGIONAL</span></h3>
+                    <p style="color: var(--accent);">ECOLE PRATIQUE DE COMMERCE ET DE TECHNOLOGIE (EPCT) BOUAKÉ •
+                        2023-2024</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Brevet d'Etude du Premier Cycle (BEPC)</h3>
+                    <p style="color: var(--accent);">LYCÉE MIXTE 1 YAMOUSSOUKRO • 2019-2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIE ASSOCIATIVE -->
+    <section id="associations" style="background: #1E2937;">
+        <div class="container">
+            <h2 class="section-title fade-in">Vie Associative & Leadership</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Secrétaire chargé de la communication</h3>
+                    <p style="color: var(--accent);">Association des Polytechniciens de Bouaké</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Chef de projet et innovation</h3>
+                    <p style="color: var(--accent);">AE2D-ELN (Association des Électroniciens)</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <h3>Membre de la commission de communication</h3>
+                    <p style="color: var(--accent);">Réseau des diplômés et étudiants en électronique de l'INP-HB de
+                        Yamoussoukro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCUMENTS -->
+    <section id="documents">
+        <div class="container">
+            <h2 class="section-title fade-in">Documents & Attestations</h2>
+            <div class="documents-grid">
+                <div class="doc-card fade-in">
+                    <i class="fas fa-file-pdf" style="font-size: 3rem; color: #e11d48; margin-bottom: 1rem;"></i>
+                    <h3>CV Complet</h3>
+                    <p style="color: var(--text-secondary);">2026</p>
+                    <a href="KOFFI%20RAOUL%20CV.pdf" download class="btn btn-primary"
+                        style="margin-top: 1rem; width: 100%; display: block; box-sizing: border-box;">Télécharger
+                        PDF</a>
+                </div>
+                <div class="doc-card fade-in">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: #eab308; margin-bottom: 1rem;"></i>
+                    <h3>Lettre de Recommandation</h3>
+                    <p style="color: var(--text-secondary);">Stage JPH - 2025</p>
+                    <a href="Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download class="btn btn-outline"
+                        style="margin-top: 1rem; width: 100%; margin-left: 0; display: block; box-sizing: border-box; text-align: center;">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANGUES & INTÉRÊTS -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+                <div class="fade-in">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.6rem;">Langues</h3>
+                    <div style="background:#1E2937; padding: 1.5rem; border-radius: 12px;">
+                        <div style="margin-bottom: 1.2rem;">Français <span
+                                style="float:right; color:var(--accent);">Courant (Natif)</span></div>
+                        <div>Anglais <span style="float:right; color:var(--accent);">A2 - En progression</span></div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.6rem;">Centres d'intérêt</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                        <span style="background:#334155; padding: 8px 18px; border-radius: 30px;">⚽ Football</span>
+                        <span style="background:#334155; padding: 8px 18px; border-radius: 30px;">📖 Lecture</span>
+                        <span style="background:#334155; padding: 8px 18px; border-radius: 30px;">🤝 Bénévolat</span>
+                        <span style="background:#334155; padding: 8px 18px; border-radius: 30px;">🎵 Musique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Me Contacter</h2>
+            <div class="contact-form fade-in">
+                <!-- Le formulaire est maintenant fonctionnel via formsubmit.co -->
+                <form id="contactForm" action="https://formsubmit.co/nguessan.koffi24@inphb.ci" method="POST">
+                    <!-- Configuration FormSubmit (optionnel) -->
+                    <input type="hidden" name="_subject" value="Nouveau message depuis ton Portfolio !">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <input type="text" name="sujet" placeholder="Sujet">
+                    <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">Envoyer le
+                        message</button>
+                </form>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p><strong>Email :</strong> <a href="mailto:nguessan.koffi24@inphb.ci"
+                        style="color: var(--accent); text-decoration: none;">nguessan.koffi24@inphb.ci</a></p>
+                <p><strong>Téléphone / WhatsApp :</strong> <a href="https://wa.me/2250779553055" target="_blank"
+                        style="color: var(--accent); text-decoration: none;">+225 0779553055 / 0566948377</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="social-links" style="margin-bottom: 2rem;">
+                <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Raoul-2003/gtch" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://wa.me/2250779553055" target="_blank" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 KOFFI N’GUESSAN RAOUL. Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Développé avec passion à
+                Yamoussoukro, Côte d'Ivoire</p>
+        </div>
+    </footer>
+
+    <!-- MODAL GALLERY -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fermerProjet()">&times;</span>
+            <h2 id="modalTitle" class="modal-title">Titre du Projet</h2>
+            <div id="modalGallery" class="gallery-grid">
+                <!-- Les images seront injectées ici -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation mobile
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+
+                    // Fermer le menu mobile si ouvert
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Animation au scroll
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.85) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', () => {
+            handleScroll();
+        });
+
+        // Formulaire (maintenant natif via FormSubmit)
+        // L'envoi du formulaire est géré automatiquement par formsubmit.co
+
+        // (La fonction downloadCV a été supprimée au profit des liens HTML 'download' natifs)
+
+        // Clavier ESC pour fermer menu mobile
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Filtrage des projets
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // --- GESTION DE LA MODALE PROJETS ---
+        const projetsData = {
+            'platforme': {
+                titre: "Plateforme de Transfert d'Argent",
+                medias: [
+                    { type: 'image', url: 'platforme/p1.jpg' },
+                    { type: 'image', url: 'platforme/p2.jpg' },
+                    { type: 'image', url: 'platforme/p3.jpg' },
+                    { type: 'image', url: 'platforme/p4.jpg' },
+                    { type: 'image', url: 'platforme/p5.jpg' },
+                    { type: 'image', url: 'platforme/p6.jpg' }
+                ]
+            },
+            'poubelle': {
+                titre: "Poubelle Intelligente",
+                medias: [
+                    { type: 'video', url: 'poubelle/v1.mp4' },
+                    { type: 'video', url: 'poubelle/v2.mp4' }
+                ]
+            },
+            'raspberry': {
+                titre: "Projet Raspberry Pi",
+                medias: [
+                    { type: 'image', url: 'raspberry/r1.jpg' },
+                    { type: 'image', url: 'raspberry/r2.jpg' },
+                    { type: 'image', url: 'raspberry/r3.jpg' },
+                    { type: 'image', url: 'raspberry/r4.jpg' },
+                    { type: 'image', url: 'raspberry/r5.jpg' }
+                ]
+            },
+            'telecom': {
+                titre: "Simulation de Réseau Informatique",
+                medias: [
+                    { type: 'image', url: 'telecom/sim_1.png' },
+                    { type: 'image', url: 'telecom/sim_2.png' }
+                ]
+            },
+            'gnote': {
+                titre: "Application Gnotev",
+                medias: [
+                    { type: 'image', url: 'project_gnote.png' }
+                ]
+            },
+            'supert': {
+                titre: "Application SuperGest",
+                medias: [
+                    { type: 'image', url: 'project_supert.png' }
+                ]
+            }
+        };
+
+        const modal = document.getElementById('projectModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalGallery = document.getElementById('modalGallery');
+
+        function ouvrirProjet(id) {
+            const data = projetsData[id];
+            if (!data) return alert("Médias non disponibles pour ce projet.");
+
+            modalTitle.textContent = data.titre;
+            modalGallery.innerHTML = '';
+
+            data.medias.forEach(media => {
+                if (media.type === 'image') {
+                    const img = document.createElement('img');
+                    img.src = media.url;
+                    img.className = 'gallery-item';
+                    img.alt = 'Image du projet';
+                    modalGallery.appendChild(img);
+                } else if (media.type === 'video') {
+                    const video = document.createElement('video');
+                    video.src = media.url;
+                    video.className = 'gallery-video';
+                    video.controls = true;
+                    modalGallery.appendChild(video);
+                }
+            });
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fermerProjet() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            modalGallery.innerHTML = ''; // Vide pour stopper les vidéos
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) fermerProjet();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && modal.classList.contains('active')) {
+                fermerProjet();
+            }
+        });
+
+        console.log("%c✅ Portfolio de KOFFI N’GUESSAN RAOUL chargé avec succès !", "color: #3B82F6; font-size: 14px; font-weight: bold");
+    </script>
+</body>
+
+</html>
