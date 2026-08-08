@@ -4,515 +4,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOFFI N’GUESSAN RAOUL | Portfolio</title>
-    <link rel="shortcut icon" href="assets/img/image.jpeg" type="image/png">
-    <meta name="description"
-        content="Portfolio de KOFFI N’GUESSAN RAOUL - Elève Technicien Supérieur en Electronique, Informatique et Télécoms">
+    <meta name="description" content="Portfolio de KOFFI N'GUESSAN RAOUL, technicien supérieur en électronique, informatique et télécommunications.">
+    <title>KOFFI N'GUESSAN RAOUL | Portfolio</title>
+    <link rel="shortcut icon" href="assets/img/image.jpeg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">RAOUL<span style="color:#3B82F6;">.</span></a>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#experiences">Expériences</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#associations">Engagement</a></li>
-                    <li><a href="#documents">Documents</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">☰</div>
+    <a class="skip-link" href="#accueil">Aller au contenu</a>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-shell">
+            <a class="brand" href="#accueil" aria-label="Accueil de Raoul">
+                <span class="brand-mark">R</span>AOUL<span class="brand-dot">.</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Navigation principale">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#experiences">Parcours</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
             </nav>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
+
+        <nav class="mobile-nav" id="mobileMenu" aria-label="Navigation mobile" hidden>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#experiences">Parcours</a>
+            <a href="#formation">Formation</a>
+            <a href="#projets">Projets</a>
+            <a href="#associations">Engagement</a>
+            <a href="#documents">Documents</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- HERO -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text fade-in">
-                    <h2 class="subtitle">Bonjour, je suis</h2>
-                    <h1>KOFFI N’GUESSAN RAOUL</h1>
-                    <p class="subtitle">Elève Technicien Supérieur en Electronique, Informatique et Télécoms</p>
-                    <p>Passionné par le développement web et la conception de systèmes intelligents.</p>
+    <main>
+        <section class="hero" id="accueil">
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy reveal reveal-left">
+                    <p class="availability"><span></span> Disponible pour projets &amp; collaborations</p>
+                    <p class="eyebrow">Bonjour, je suis</p>
+                    <h1 class="gradient-text">KOFFI N'GUESSAN<br>RAOUL</h1>
+                    <p class="hero-role">Élève technicien supérieur en électronique, informatique &amp; télécommunications</p>
+                    <p class="hero-description">Je conçois des applications utiles et des systèmes intelligents, à la croisée du web, de l'IoT et des réseaux.</p>
 
-                    <div style="margin-top: 2.5rem;">
-                        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                        <div style="display: flex; gap: 0.5rem;"><a href="assets/docs/KOFFI%20N'GUESSAN%20RAOUL.pdf" download class="btn btn-outline" style="margin-left: 0;">CV (Fr)</a><a href="assets/docs/KOFFI%20N'GUESSAN%20RAOUL%202.pdf" download class="btn btn-outline" style="margin-left: 0;">CV (En)</a></div>
+                    <div class="hero-badges" aria-label="Domaines principaux">
+                        <span><i class="fa-solid fa-microchip"></i> Systèmes intelligents</span>
+                        <span><i class="fa-solid fa-code"></i> Développement web</span>
+                        <span><i class="fa-solid fa-network-wired"></i> Réseaux</span>
                     </div>
 
-                    <div style="margin-top: 3rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
-                        <div style="display: flex; align-items: center; gap: 1rem; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); border-radius: 14px; padding: 12px 20px; backdrop-filter: blur(6px);">
-                            <img src="assets/img/inp.jpg" alt="Logo INP-HB" style="width: 52px; height: 52px; border-radius: 8px; object-fit: contain; background: white; padding: 4px;">
-                            <div>
-                                <strong style="color: var(--accent); font-size: 1rem;">INP-HB</strong><br>
-                                <span style="color: var(--text-secondary); font-size: 0.88rem;">Institut National Polytechnique</span><br>
-                                <span style="color: var(--text-secondary); font-size: 0.83rem;">Yamoussoukro, Côte d'Ivoire</span>
-                            </div>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projets"><i class="fa-solid fa-grid-2"></i> Voir mes projets</a>
+                        <a class="button button-secondary" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL.pdf" download><i class="fa-solid fa-download"></i> CV français</a>
+                    </div>
+
+                    <div class="school-chip">
+                        <img src="assets/img/inp.jpg" alt="Logo de l'INP-HB">
+                        <div>
+                            <strong>INP-HB</strong>
+                            <span>Institut National Polytechnique<br>Yamoussoukro, Côte d'Ivoire</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero-image fade-in">
-                    <img src="assets/img/image.jpeg" alt="KOFFI N’GUESSAN RAOUL" class="avatar">
+                <div class="hero-visual reveal reveal-right">
+                    <div class="portrait-rings" aria-hidden="true"></div>
+                    <div class="portrait-frame floating">
+                        <img src="assets/img/image.jpeg" alt="Portrait de KOFFI N'GUESSAN RAOUL">
+                    </div>
+                    <div class="floating-card card-code"><i class="fa-solid fa-code"></i><span>Web</span></div>
+                    <div class="floating-card card-iot"><i class="fa-solid fa-wifi"></i><span>IoT</span></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- À PROPOS -->
-    <section id="apropos">
-        <div class="container">
-            <h2 class="section-title fade-in">À propos de moi</h2>
-            <div class="about-grid">
-                <div class="fade-in">
-                    <img src="assets/img/image.jpeg" alt="Photo de profil"
-                        style="width:100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); object-fit: cover; aspect-ratio: 4/5;">
+        <section class="stats-section" aria-label="Quelques chiffres">
+            <div class="container stats-grid">
+                <article class="stat-card reveal">
+                    <strong><span data-counter="8">0</span>+</strong>
+                    <span>projets réalisés</span>
+                </article>
+                <article class="stat-card reveal">
+                    <strong><span data-counter="3">0</span></strong>
+                    <span>certifications IT</span>
+                </article>
+                <article class="stat-card reveal">
+                    <strong><span data-counter="2">0</span></strong>
+                    <span>expériences terrain</span>
+                </article>
+                <article class="stat-card reveal">
+                    <strong><span data-counter="4">0</span></strong>
+                    <span>engagements associatifs</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="apropos">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Mon profil</p>
+                    <h2>À propos de moi</h2>
+                    <span class="heading-line"></span>
                 </div>
-                <div class="fade-in">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Étudiant motivé et passionné</h3>
-                    <p style="font-size: 1.15rem; color: var(--text-secondary);">
-                        Étudiant en Électronique, informatique et télécommunications à l'INP-HB, motivé, rigoureux et passionné par les technologies, je suis à la recherche d'opportunités pour développer mes compétences et contribuer efficacement aux projets qui me seront confiés.
-                    </p>
 
-                    <ul style="list-style: none; margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; color: var(--text-secondary); font-size: 1.05rem;">
-                        <li><i class="fas fa-flag" style="color: var(--accent); margin-right: 8px; width: 18px;"></i> <strong>Nationalité :</strong> Ivoirienne</li>
-                        <li><i class="fas fa-envelope" style="color: var(--accent); margin-right: 8px; width: 18px;"></i> <strong>Email :</strong> <a href="mailto:nguessan.koffi24@inphb.ci" style="color: inherit; text-decoration: none;">nguessan.koffi24@inphb.ci</a></li>
-                        <li><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 8px; width: 18px;"></i> <strong>Téléphone :</strong> <a href="https://wa.me/2250779553055" target="_blank" style="color: inherit; text-decoration: none;">+225 07-79-55-30-55</a></li>
-                        <li><i class="fas fa-globe" style="color: var(--accent); margin-right: 8px; width: 18px;"></i> <strong>Portfolio :</strong> <a href="https://Potfolio-three-brown.vercel.app" target="_blank" style="color: inherit; text-decoration: none;">Potfolio-three-brown.vercel.app</a></li>
-                    </ul>
+                <div class="about-grid">
+                    <div class="about-photo reveal reveal-left">
+                        <div class="photo-gradient"></div>
+                        <img src="assets/img/image.jpeg" alt="KOFFI N'GUESSAN RAOUL">
+                    </div>
 
-                    <div style="margin-top: 2.5rem;">
-                        <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <div class="about-copy reveal reveal-right">
+                        <p class="about-kicker">Étudiant motivé &amp; passionné</p>
+                        <h3>Transformer une idée en solution concrète.</h3>
+                        <p>Étudiant en électronique, informatique et télécommunications à l'INP-HB, je suis motivé, rigoureux et curieux. Je recherche des opportunités qui me permettront de renforcer mes compétences et de contribuer utilement à des projets ambitieux.</p>
+                        <p>Mon parcours me conduit naturellement vers le développement web, les systèmes embarqués, les réseaux et la conception de solutions intelligentes.</p>
+
+                        <div class="profile-tags">
+                            <span>Développement web</span>
+                            <span>IoT &amp; électronique</span>
+                            <span>Réseaux</span>
+                            <span>Innovation</span>
+                        </div>
+
+                        <div class="identity-grid">
+                            <a href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small>Email</small>nguessan.koffi24@inphb.ci</span></a>
+                            <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i><span><small>Téléphone</small>+225 07 79 55 30 55</span></a>
+                            <span><i class="fa-solid fa-flag"></i><span><small>Nationalité</small>Ivoirienne</span></span>
+                            <a href="https://potfolio-three-brown.vercel.app" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe"></i><span><small>Portfolio</small>Voir en ligne</span></a>
+                        </div>
+
+                        <a class="text-link" href="#contact">Échangeons sur votre projet <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- COMPÉTENCES -->
-    <section id="competences" style="background: #1E2937;">
-        <div class="container">
-            <h2 class="section-title fade-in">Compétences</h2>
-            <div class="skills-container">
-                <!-- Électronique -->
-                <div class="skill-card fade-in">
-                    <h3><i class="fas fa-microchip"></i> Électronique</h3>
-                    <div class="skill-item"><span>Électronique Programmable</span></div>
-                    <div class="skill-item"><span>Internet des Objets (IoT)</span></div>
-                    <div class="skill-item"><span>Sécurité Électronique</span></div>
-                    <div class="skill-item"><span>Robotique & Automatismes</span></div>
-                    <div class="skill-item" style="border-bottom: none;"><span>Proteus (Typon)</span></div>
+        <section class="section section-surface" id="competences">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Ce que je maîtrise</p>
+                    <h2>Compétences techniques</h2>
+                    <span class="heading-line"></span>
                 </div>
 
-                <!-- Télécommunications -->
-                <div class="skill-card fade-in">
-                    <h3><i class="fas fa-network-wired"></i> Télécoms & Réseaux</h3>
-                    <div class="skill-item"><span>Réseaux Informatiques</span></div>
-                    <div class="skill-item"><span>Réseaux Optiques</span></div>
-                    <div class="skill-item" style="border-bottom: none;"><span>Maintenance Réseaux</span></div>
-                </div>
-
-                <!-- Informatique -->
-                <div class="skill-card fade-in">
-                    <h3><i class="fas fa-laptop-code"></i> Informatique</h3>
-                    <div class="skill-item"><span>Dev web (PHP/MySQL, HTML/CSS)</span></div>
-                    <div class="skill-item"><span>JS (React.Js, Node.Js)</span></div>
-                    <div class="skill-item"><span>Python (Django)</span></div>
-                    <div class="skill-item"><span>SGBD (MySQL/PostgreSQL)</span></div>
-                    <div class="skill-item"><span>Système Linux & Cloud</span></div>
-                    <div class="skill-item"><span>Angular</span></div>
-                    <div class="skill-item" style="border-bottom: none;"><span>Bootstrap</span></div>
-                </div>
-
-                <!-- Langues -->
-                <div class="skill-card fade-in">
-                    <h3><i class="fas fa-language"></i> Langues</h3>
-                    <div class="skill-item"><span>Français <strong style="color: var(--accent);">(Courant)</strong></span></div>
-                    <div class="skill-item" style="border-bottom: none;"><span>Anglais <strong style="color: var(--accent);">(A2 en progression)</strong></span></div>
-                </div>
-
-                <!-- Divers -->
-                <div class="skill-card fade-in">
-                    <h3><i class="fas fa-heart"></i> Divers</h3>
-                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px;">
-                        <strong>ATOUTS :</strong>
-                        <span style="color: var(--text-secondary); line-height: 1.5;">Esprit d'équipe, curieux, résilient</span>
-                    </div>
-                    <div class="skill-item" style="flex-direction: column; align-items: flex-start; gap: 5px; border-bottom: none;">
-                        <strong>LOISIRS :</strong>
-                        <span style="color: var(--text-secondary); line-height: 1.5;">Sport (Football, Volleyball), Musique, Tourisme</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPÉRIENCES -->
-    <section id="experiences" style="background: #1E2937;">
-        <div class="container">
-            <h2 class="section-title fade-in">Expériences Professionnelles</h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Stage découverte - Mandigo SARL Bouaké</h3>
-                    <p style="color: var(--accent);">JUILLET 2025 - AOÛT 2025</p>
-                    <p style="color: var(--text-secondary);">Rôle : Développeur web</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Stage de fin de cycle - JPH Electronique Bouaké</h3>
-                    <p style="color: var(--accent);">DÉCEMBRE 2023 - JANVIER 2024</p>
-                    <p style="color: var(--text-secondary); font-weight: 600; margin-bottom: 0.5rem;">Rôle : Aide maintenancier</p>
-                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); margin-bottom: 1rem;">
-                        <li>Maintenance des équipements électroniques</li>
-                        <li>Diagnostic et réparation de pannes</li>
-                        <li>Participation aux installations techniques</li>
-                    </ul>
-                    <a href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem; margin-top: 0.5rem; margin-left: 0; display: inline-block;"><i class="fas fa-file-pdf"></i> Lettre de Recommandation</a>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Électronique</h3>
+                        <p>Conception et programmation de systèmes connectés et automatisés.</p>
+                        <ul>
+                            <li>Électronique programmable</li>
+                            <li>Internet des objets (IoT)</li>
+                            <li>Sécurité électronique</li>
+                            <li>Robotique &amp; automatismes</li>
+                            <li>Proteus (typon)</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Télécoms &amp; réseaux</h3>
+                        <p>Comprendre, déployer et maintenir les infrastructures réseau.</p>
+                        <ul>
+                            <li>Réseaux informatiques</li>
+                            <li>Réseaux optiques</li>
+                            <li>Maintenance réseaux</li>
+                            <li>Simulation réseau</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Informatique</h3>
+                        <p>Créer des applications web modernes, complètes et connectées.</p>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>PHP, MySQL, PostgreSQL</li>
+                            <li>React.js, Node.js, Angular</li>
+                            <li>Python &amp; Django</li>
+                            <li>Linux &amp; cloud</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-user-group"></i></div>
+                        <h3>Qualités &amp; langues</h3>
+                        <p>Un profil technique qui s'appuie sur la collaboration et l'apprentissage continu.</p>
+                        <ul>
+                            <li>Français : courant</li>
+                            <li>Anglais : A2, en progression</li>
+                            <li>Esprit d'équipe &amp; curiosité</li>
+                            <li>Résilience &amp; rigueur</li>
+                            <li>Loisirs : football, volleyball, musique, tourisme</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FORMATION -->
-    <section id="formation">
-        <div class="container">
-            <h2 class="section-title fade-in">Formation</h2>
+        <section class="section" id="experiences">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Apprendre sur le terrain</p>
+                    <h2>Expériences professionnelles</h2>
+                    <span class="heading-line"></span>
+                </div>
 
-            <!-- Badge INP-HB -->
-            <div class="fade-in" style="display: flex; justify-content: center; margin-bottom: 3rem;">
-                <div style="display: flex; align-items: center; gap: 1.5rem; background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(30,41,55,0.9)); border: 1px solid rgba(59,130,246,0.3); border-radius: 20px; padding: 1.5rem 2.5rem; box-shadow: 0 8px 32px rgba(59,130,246,0.15);">
-                    <img src="assets/img/inp.jpg" alt="Logo INP-HB" style="width: 80px; height: 80px; border-radius: 12px; object-fit: contain; background: white; padding: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                <div class="timeline">
+                    <article class="timeline-item reveal reveal-left">
+                        <span class="timeline-marker"><i class="fa-solid fa-briefcase"></i></span>
+                        <div class="timeline-card">
+                            <p class="timeline-date">Juillet 2025 — Août 2025</p>
+                            <h3>Stage découverte · Mandigo SARL, Bouaké</h3>
+                            <p class="timeline-role">Rôle : développeur web</p>
+                            <p>Découverte d'un environnement professionnel de développement et participation à des activités liées à la création de solutions web.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item timeline-item-right reveal reveal-right">
+                        <span class="timeline-marker"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                        <div class="timeline-card">
+                            <p class="timeline-date">Décembre 2023 — Janvier 2024</p>
+                            <h3>Stage de fin de cycle · JPH Électronique, Bouaké</h3>
+                            <p class="timeline-role">Rôle : aide maintenancier</p>
+                            <ul>
+                                <li>Maintenance des équipements électroniques</li>
+                                <li>Diagnostic et réparation de pannes</li>
+                                <li>Participation aux installations techniques</li>
+                            </ul>
+                            <a class="mini-link" href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download><i class="fa-solid fa-file-pdf"></i> Lettre de recommandation</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-surface" id="formation">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Parcours académique</p>
+                    <h2>Formation &amp; certifications</h2>
+                    <span class="heading-line"></span>
+                </div>
+
+                <div class="education-highlight reveal">
+                    <img src="assets/img/inp.jpg" alt="Logo de l'INP-HB">
                     <div>
-                        <div style="font-size: 1.3rem; font-weight: 700; color: white; font-family: 'Poppins', sans-serif;">INP-HB</div>
-                        <div style="color: var(--accent); font-weight: 600; margin-bottom: 2px;">Institut National Polytechnique Houphouët-Boigny</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem;">📍 Yamoussoukro, Côte d'Ivoire</div>
+                        <p>Établissement</p>
+                        <h3>Institut National Polytechnique Houphouët-Boigny</h3>
+                        <span><i class="fa-solid fa-location-dot"></i> Yamoussoukro, Côte d'Ivoire</span>
                     </div>
+                </div>
+
+                <div class="education-grid">
+                    <article class="education-card reveal">
+                        <span>2025 — 2026</span>
+                        <h3>2e année, cycle Technicien Supérieur</h3>
+                        <p>Sciences et technologies de l'information et de la communication · spécialité électronique, informatique et télécommunications.</p>
+                    </article>
+                    <article class="education-card reveal">
+                        <span>2024 — 2025</span>
+                        <h3>Tronc commun STIC</h3>
+                        <p>Sciences et technologies de l'information et de la communication · INP-HB.</p>
+                    </article>
+                    <article class="education-card reveal">
+                        <span>Juin 2025</span>
+                        <h3>Attestation de formation Campus citoyen</h3>
+                        <p>Formation complémentaire axée sur l'engagement, la citoyenneté et la vie de campus.</p>
+                    </article>
+                    <article class="education-card reveal">
+                        <span>2023 — 2024</span>
+                        <h3>Brevet de Technicien en électronique</h3>
+                        <p>EPCT Bouaké · <strong>Lauréat régional</strong>.</p>
+                    </article>
+                    <article class="education-card reveal">
+                        <span>2019 — 2020</span>
+                        <h3>BEPC</h3>
+                        <p>Lycée Mixte 1 de Yamoussoukro.</p>
+                    </article>
+                </div>
+
+                <div class="certificates-grid">
+                    <article class="certificate-card reveal">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div><h3>Certificat IT</h3><p>Certification générale en informatique et technologies.</p></div>
+                        <a href="assets/docs/CERTIFICAT%20IT.pdf" download aria-label="Télécharger le certificat IT"><i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
+                    <article class="certificate-card reveal">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div><h3>Cybersecurity · Cisco</h3><p>Introduction to Cybersecurity par Cisco Networking Academy.</p></div>
+                        <a href="assets/docs/Introduction_to_Cybersecurity_certificate_nguessanraoul48-gmail-com_2ef65d7d-923b-4890-9194-5a4e20af4c1b.pdf" download aria-label="Télécharger le certificat Cybersecurity"><i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
+                    <article class="certificate-card reveal">
+                        <i class="fa-solid fa-wifi"></i>
+                        <div><h3>IoT · Cisco</h3><p>Introduction to Internet of Things par Cisco Networking Academy.</p></div>
+                        <a href="assets/docs/Introduction_to_IoT_certificate_nguessanraoul48-gmail-com_f8501c94-6466-4e85-82ff-80dbaacdc49b.pdf" download aria-label="Télécharger le certificat IoT"><i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Certifications Cisco & IT</h3>
-                    <p style="color: var(--accent); margin-bottom: 1rem;">2026</p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1rem; width: 100%;">
-                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(59, 130, 246, 0.2); padding: 1.25rem; border-radius: 12px; backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: space-between;">
-                            <div>
-                                <strong style="color: white; font-size: 1rem; display: block; margin-bottom: 0.5rem;"><i class="fas fa-certificate" style="color: var(--accent); margin-right: 6px;"></i> Certificat IT</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-bottom: 1rem;">Certification générale en informatique et technologies.</span>
-                            </div>
-                            <a href="assets/docs/CERTIFICAT%20IT.pdf" download class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem; margin: 0; width: 100%; text-align: center; display: block; box-sizing: border-box; border-radius: 6px;"><i class="fas fa-download"></i> Télécharger</a>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(59, 130, 246, 0.2); padding: 1.25rem; border-radius: 12px; backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: space-between;">
-                            <div>
-                                <strong style="color: white; font-size: 1rem; display: block; margin-bottom: 0.5rem;"><i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 6px;"></i> Cybersecurity (Cisco)</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-bottom: 1rem;">Introduction to Cybersecurity par Cisco Networking Academy.</span>
-                            </div>
-                            <a href="assets/docs/Introduction_to_Cybersecurity_certificate_nguessanraoul48-gmail-com_2ef65d7d-923b-4890-9194-5a4e20af4c1b.pdf" download class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem; margin: 0; width: 100%; text-align: center; display: block; box-sizing: border-box; border-radius: 6px;"><i class="fas fa-download"></i> Télécharger</a>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(59, 130, 246, 0.2); padding: 1.25rem; border-radius: 12px; backdrop-filter: blur(4px); display: flex; flex-direction: column; justify-content: space-between;">
-                            <div>
-                                <strong style="color: white; font-size: 1rem; display: block; margin-bottom: 0.5rem;"><i class="fas fa-network-wired" style="color: var(--accent); margin-right: 6px;"></i> IoT (Cisco)</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-bottom: 1rem;">Introduction to Internet of Things par Cisco Networking Academy.</span>
-                            </div>
-                            <a href="assets/docs/Introduction_to_IoT_certificate_nguessanraoul48-gmail-com_f8501c94-6466-4e85-82ff-80dbaacdc49b.pdf" download class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem; margin: 0; width: 100%; text-align: center; display: block; box-sizing: border-box; border-radius: 6px;"><i class="fas fa-download"></i> Télécharger</a>
-                        </div>
-                    </div>
+        <section class="section projects-section" id="projets">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Sélection de réalisations</p>
+                    <h2>Mes projets</h2>
+                    <span class="heading-line"></span>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>2ème année du cycle Technicien Supérieur en Science et Technologie de l'Information et de Communication</h3>
-                    <p style="color: var(--accent);">INP-HB • Spécialité Électronique, Informatique et Télécommunication • 2025-2026</p>
+
+                <div class="project-filters reveal" aria-label="Filtrer les projets">
+                    <button class="filter-button is-active" type="button" data-filter="all">Tous</button>
+                    <button class="filter-button" type="button" data-filter="elec">Électronique &amp; IoT</button>
+                    <button class="filter-button" type="button" data-filter="info">Informatique</button>
+                    <button class="filter-button" type="button" data-filter="telecom">Télécoms</button>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Attestation de Formation campus citoyen</h3>
-                    <p style="color: var(--accent);">JUIN 2025</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Tronc commun en Science et Technologie de l'Information et de Communication</h3>
-                    <p style="color: var(--accent);">INP-HB • 2024-2025</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Brevet de Technicien (BT) en Électronique <span style="color:#eab308;">🏆 LAURÉAT RÉGIONAL</span></h3>
-                    <p style="color: var(--accent);">L'École Pratique de commerce et de la Technologie de Bouaké (EPCT) • 2023-2024</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Brevet d'Étude du Premier Cycle (BEPC)</h3>
-                    <p style="color: var(--accent);">LYCÉE MIXTE 1 YAMOUSSOUKRO • 2019-2020</p>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal" data-category="elec">
+                        <div class="project-image"><img src="assets/img/project_caddy.png" alt="Caddie intelligent"><span class="project-category">Électronique &amp; IoT</span></div>
+                        <div class="project-body"><p class="project-date">Décembre 2025 — Juin 2026</p><h3>Caddie intelligent</h3><p>Chariot autonome avec détection d'objets et calcul du total.</p><div class="project-tech"><span>Arduino</span><span>Raspberry Pi</span><span>Capteurs</span></div><button class="project-link" type="button" data-project="caddy">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
+                    <article class="project-card reveal" data-category="info">
+                        <div class="project-image"><img src="assets/img/project_gnote.png" alt="Gestion d'étudiant de l'ESI"><span class="project-category">Informatique</span></div>
+                        <div class="project-body"><p class="project-date">Début 2026 — Mars 2026</p><h3>Gestion d'étudiant de l'ESI</h3><p>Plateforme de gestion scolaire et universitaire : notes, enseignants et administration.</p><div class="project-tech"><span>PHP</span><span>MySQL</span><span>CSS</span></div><div class="project-actions"><button class="project-link" type="button" data-project="gnote">Images</button><a class="project-link" href="https://gnote.gamer.gd" target="_blank" rel="noreferrer">Visiter <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+                    </article>
+                    <article class="project-card reveal" data-category="info">
+                        <div class="project-image"><img src="assets/img/p3.jpg" alt="Site de transfert Wave"><span class="project-category">Informatique</span></div>
+                        <div class="project-body"><p class="project-date">Juillet 2025 — Août 2025</p><h3>Site de transfert Wave</h3><p>Site de transfert inspiré du modèle Wave, avec authentification et historique.</p><div class="project-tech"><span>HTML</span><span>JavaScript</span><span>PHP</span></div><button class="project-link" type="button" data-project="platforme">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
+                    <article class="project-card reveal" data-category="info">
+                        <div class="project-image"><img src="assets/img/project_energy.png" alt="Supervision et contrôle énergétique"><span class="project-category">Informatique</span></div>
+                        <div class="project-body"><p class="project-date">Mars 2025 — Juin 2025</p><h3>Supervision énergétique</h3><p>Tableau de bord web de supervision et de contrôle énergétique en temps réel.</p><div class="project-tech"><span>React.js</span><span>Node.js</span><span>Express</span></div><button class="project-link" type="button" data-project="energy">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
+                    <article class="project-card reveal" data-category="elec">
+                        <div class="project-image"><img src="assets/img/project_poubelle.png" alt="Poubelle intelligente"><span class="project-category">Électronique &amp; IoT</span></div>
+                        <div class="project-body"><p class="project-date">2024 — 2025</p><h3>Poubelle intelligente</h3><p>Système de tri automatique des déchets, équipé de capteurs et de notifications.</p><div class="project-tech"><span>Microcontrôleurs</span><span>Capteurs</span><span>IoT</span></div><button class="project-link" type="button" data-project="poubelle">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
+                    <article class="project-card reveal" data-category="info">
+                        <div class="project-image"><img src="assets/img/project_supert.png" alt="Application SuperGest"><span class="project-category">Informatique</span></div>
+                        <div class="project-body"><h3>Application SuperGest</h3><p>Système de gestion de stock, ventes et administration avec tableau de bord.</p><div class="project-tech"><span>PHP</span><span>PostgreSQL</span><span>JavaScript</span></div><div class="project-actions"><button class="project-link" type="button" data-project="supert">Images</button><a class="project-link" href="https://supert.page.gd" target="_blank" rel="noreferrer">Visiter <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+                    </article>
+                    <article class="project-card reveal" data-category="telecom">
+                        <div class="project-image"><img src="assets/img/sim_1.png" alt="Simulation de réseau informatique"><span class="project-category">Télécoms</span></div>
+                        <div class="project-body"><h3>Simulation de réseau informatique</h3><p>Modélisation et simulation d'une architecture de réseau avec analyse de performance.</p><div class="project-tech"><span>Cisco Packet Tracer</span><span>Réseaux</span></div><button class="project-link" type="button" data-project="telecom">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
+                    <article class="project-card reveal" data-category="elec">
+                        <div class="project-image"><img src="assets/img/r1.jpg" alt="Projet Raspberry Pi"><span class="project-category">Électronique &amp; IoT</span></div>
+                        <div class="project-body"><h3>Projet Raspberry Pi</h3><p>Conception et réalisation d'un système intelligent basé sur Raspberry Pi.</p><div class="project-tech"><span>Raspberry Pi</span><span>Python</span><span>Électronique</span></div><button class="project-link" type="button" data-project="raspberry">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROJETS -->
-    <section id="projets">
-        <div class="container">
-            <h2 class="section-title fade-in">Projets Réalisés</h2>
+        <section class="section section-surface" id="associations">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Au-delà de la technique</p>
+                    <h2>Engagement &amp; leadership</h2>
+                    <span class="heading-line"></span>
+                </div>
 
-            <div class="project-filters fade-in">
-                <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="elec">Électronique</button>
-                <button class="filter-btn" data-filter="info">Informatique</button>
-                <button class="filter-btn" data-filter="telecom">Télécoms</button>
+                <div class="engagement-grid">
+                    <article class="engagement-card reveal"><span>Depuis mars 2026</span><i class="fa-solid fa-bullhorn"></i><h3>Membre de la communication</h3><p>Réseau des étudiants et diplômés en électronique à l'INP-HB de Yamoussoukro.</p></article>
+                    <article class="engagement-card reveal"><span>Depuis septembre 2025</span><i class="fa-solid fa-people-group"></i><h3>Secrétaire à la communication</h3><p>Association des Polytechniciens de Bouaké (APOLYB).</p></article>
+                    <article class="engagement-card reveal"><span>Depuis février 2025</span><i class="fa-solid fa-lightbulb"></i><h3>Chef projet &amp; innovation</h3><p>Association des étudiants et diplômés en DUT électronique de l'INP-HB.</p></article>
+                    <article class="engagement-card reveal"><span>Février 2025</span><i class="fa-solid fa-handshake-angle"></i><h3>Bénévole · commission projet</h3><p>Participation à la Semaine de l'Industrie.</p></article>
+                </div>
             </div>
+        </section>
 
-            <div class="projects-grid">
-                <!-- Projet 1 : Caddie Intelligent (Décembre 2025 - Juin 2026) -->
-                <div class="project-card fade-in" data-category="elec">
-                    <div class="project-img" style="background-image: url('assets/img/project_caddy.png')">
-                    </div>
-                    <div class="project-content">
-                        <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase;">Décembre 2025 - Juin 2026</span>
-                        <h3 style="margin-top: 5px;">Caddie Intelligent</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Conception et réalisation d'un caddie intelligent (chariot autonome) avec détection d'objets et calcul du total.</p>
-                        <p><strong>Technologies :</strong> Arduino, Raspberry Pi, Capteurs, Électronique</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('caddy')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
+        <section class="section" id="documents">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">À télécharger</p>
+                    <h2>Documents &amp; attestations</h2>
+                    <span class="heading-line"></span>
                 </div>
 
-                <!-- Projet 2 : Gestion d'Étudiant de l'ESI (Début 2026 - Mars 2026) -->
-                <div class="project-card fade-in" data-category="info">
-                    <div class="project-img"
-                        style="background-image: url('assets/img/project_gnote.png'); background-size: cover; background-position: center top;">
-                    </div>
-                    <div class="project-content">
-                        <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase;">Début 2026 - Mars 2026</span>
-                        <h3 style="margin-top: 5px;">Gestion d'Étudiant de l'ESI</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Développement d'un site de gestion scolaire et universitaire pour les étudiants de l'ESI (notes, profs, administration).</p>
-                        <p><strong>Technologies :</strong> PHP, HTML, CSS, MySQL</p>
-                        <div style="display: flex; gap: 10px; margin-top: 1rem;">
-                            <a href="javascript:void(0)" onclick="ouvrirProjet('gnote')" class="btn btn-outline"
-                                style="font-size: 0.95rem; padding: 10px 15px; flex: 1; text-align: center; margin: 0;">Images</a>
-                            <a href="https://gnote.gamer.gd" target="_blank" class="btn btn-primary"
-                                style="font-size: 0.95rem; padding: 10px 15px; flex: 2; text-align: center; margin: 0;"><i
-                                    class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Visiter le site</a>
-                        </div>
-                    </div>
+                <div class="documents-grid">
+                    <article class="document-card reveal"><div class="document-icon"><i class="fa-solid fa-file-pdf"></i></div><p>Curriculum vitæ</p><h3>CV complet</h3><span>Version française ou anglaise</span><div><a class="button button-primary button-small" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL.pdf" download>FR</a><a class="button button-secondary button-small" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL%202.pdf" download>EN</a></div></article>
+                    <article class="document-card reveal"><div class="document-icon document-icon-gold"><i class="fa-solid fa-award"></i></div><p>Stage JPH</p><h3>Lettre de recommandation</h3><span>Attestation professionnelle</span><a class="button button-secondary button-small" href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download><i class="fa-solid fa-download"></i> Télécharger</a></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Construisons quelque chose</p>
+                    <h2>Me contacter</h2>
+                    <span class="heading-line"></span>
                 </div>
 
-                <!-- Projet 3 : Site de transfert Wave (Juillet 2025 - Août 2025) -->
-                <div class="project-card fade-in" data-category="info">
-                    <div class="project-img" style="background-image: url('assets/img/p3.jpg')">
-                    </div>
-                    <div class="project-content">
-                        <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase;">Juillet 2025 - Août 2025</span>
-                        <h3 style="margin-top: 5px;">Site de transfert Wave</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Développement d'un site de transfert inspiré du modèle Wave, avec fonctionnalités d'authentification et historique.</p>
-                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, PHP</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('platforme')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
-                </div>
-
-                <!-- Projet 4 : Supervision Énergétique (Mars 2025 - Juin 2025) -->
-                <div class="project-card fade-in" data-category="info">
-                    <div class="project-img" style="background-image: url('assets/img/project_energy.png')">
-                    </div>
-                    <div class="project-content">
-                        <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase;">Mars 2025 - Juin 2025</span>
-                        <h3 style="margin-top: 5px;">Supervision & Contrôle Énergétique</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Création d'une plateforme web moderne de supervision et de contrôle énergétique avec tableau de bord temps réel.</p>
-                        <p><strong>Technologies :</strong> React.js, Node.js, Express.js</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('energy')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
-                </div>
-
-                <!-- Projet 5 : Poubelle Intelligente (2024 - 2025) -->
-                <div class="project-card fade-in" data-category="elec">
-                    <div class="project-img" style="background-image: url('assets/img/project_poubelle.png')">
-                    </div>
-                    <div class="project-content">
-                        <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase;">2024 - 2025</span>
-                        <h3 style="margin-top: 5px;">Poubelle Intelligente</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Réalisation d'une poubelle intelligente avec système de tri automatique des déchets et notifications.</p>
-                        <p><strong>Technologies :</strong> Microcontrôleurs, Capteurs ultrason</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('poubelle')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
-                </div>
-
-                <!-- Projet 6 : Application SuperGest -->
-                <div class="project-card fade-in" data-category="info">
-                    <div class="project-img"
-                        style="background-image: url('assets/img/project_supert.png'); background-size: cover; background-position: center top;">
-                    </div>
-                    <div class="project-content">
-                        <h3>Application SuperGest</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Système complet de gestion de stock,
-                            ventes et administration avec tableau de bord interactif.</p>
-                        <p><strong>Technologies :</strong> HTML, CSS, PHP, PostgreSQL, JavaScript</p>
-                        <div style="display: flex; gap: 10px; margin-top: 1rem;">
-                            <a href="javascript:void(0)" onclick="ouvrirProjet('supert')" class="btn btn-outline"
-                                style="font-size: 0.95rem; padding: 10px 15px; flex: 1; text-align: center; margin: 0;">Images</a>
-                            <a href="https://supert.page.gd" target="_blank" class="btn btn-primary"
-                                style="font-size: 0.95rem; padding: 10px 15px; flex: 2; text-align: center; margin: 0;"><i
-                                    class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Visiter le site</a>
+                <div class="contact-grid">
+                    <div class="contact-copy reveal reveal-left">
+                        <p class="contact-intro">Une idée, une opportunité ou un projet à réaliser ? Écrivez-moi. Je vous répondrai avec plaisir.</p>
+                        <a class="contact-item" href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small>Email</small>nguessan.koffi24@inphb.ci</span></a>
+                        <a class="contact-item" href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i><span><small>Téléphone / WhatsApp</small>+225 07 79 55 30 55 / 05 66 94 83 77</span></a>
+                        <span class="contact-item"><i class="fa-solid fa-location-dot"></i><span><small>Localisation</small>Yamoussoukro, Côte d'Ivoire</span></span>
+                        <div class="contact-socials">
+                            <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Raoul-2003/gtch" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <!-- Projet 7 : Simulation de Réseau Informatique -->
-                <div class="project-card fade-in" data-category="telecom">
-                    <div class="project-img"
-                        style="background-image: url('assets/img/sim_1.png'); background-position: center; background-size: cover;">
-                    </div>
-                    <div class="project-content">
-                        <h3>Simulation de Réseau Informatique</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Modélisation et simulation d'une
-                            architecture de réseau informatique avec analyse de performance.</p>
-                        <p><strong>Technologies :</strong> Cisco Packet Tracer, Réseaux</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('telecom')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
+                    <form class="contact-form reveal reveal-right" id="contactForm" action="https://formsubmit.co/nguessan.koffi24@inphb.ci" method="POST">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Raoul">
+                        <input type="hidden" name="_captcha" value="false">
+                        <label>Votre nom<input type="text" name="name" placeholder="Votre nom" required></label>
+                        <label>Votre email<input type="email" name="email" placeholder="nom@exemple.com" required></label>
+                        <label>Sujet<input type="text" name="sujet" placeholder="De quoi souhaitez-vous parler ?"></label>
+                        <label>Votre message<textarea name="message" rows="5" placeholder="Écrivez votre message..." required></textarea></label>
+                        <button class="button button-primary" id="submitButton" type="submit"><span>Envoyer le message</span><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <!-- Projet 8 : Projet Raspberry Pi -->
-                <div class="project-card fade-in" data-category="elec">
-                    <div class="project-img"
-                        style="background-image: url('assets/img/r1.jpg'); background-size: cover; background-position: center;">
-                    </div>
-                    <div class="project-content">
-                        <h3>Projet Raspberry Pi</h3>
-                        <p style="color: var(--text-secondary); margin: 12px 0;">Conception et réalisation d'un système
-                            intelligent basé sur Raspberry Pi.</p>
-                        <p><strong>Technologies :</strong> Raspberry Pi, Python, Électronique</p>
-                        <a href="javascript:void(0)" onclick="ouvrirProjet('raspberry')" class="btn btn-primary"
-                            style="margin-top: 1rem; font-size: 0.95rem; padding: 10px 24px;">Voir le projet</a>
-                    </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand" href="#accueil"><span class="brand-mark">R</span>AOUL<span class="brand-dot">.</span></a>
+                <p>Technicien supérieur passionné par le web, les systèmes intelligents et l'innovation.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Raoul-2003/gtch" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:nguessan.koffi24@inphb.ci" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
                 </div>
+            </div>
+            <div>
+                <h3>Navigation</h3>
+                <div class="footer-links"><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#experiences">Parcours</a><a href="#projets">Projets</a><a href="#documents">Documents</a><a href="#contact">Contact</a></div>
+            </div>
+            <div>
+                <h3>Me joindre</h3>
+                <a href="mailto:nguessan.koffi24@inphb.ci">nguessan.koffi24@inphb.ci</a>
+                <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer">+225 07 79 55 30 55 / 05 66 94 83 77</a>
+                <p>Yamoussoukro, Côte d'Ivoire</p>
             </div>
         </div>
-    </section>
-
-    <!-- VIE ASSOCIATIVE -->
-    <section id="associations" style="background: #1E2937;">
-        <div class="container">
-            <h2 class="section-title fade-in">Vie Associative & Leadership</h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Membre de la communication</h3>
-                    <p style="color: var(--accent);">Depuis Mars 2026</p>
-                    <p style="color: var(--text-secondary);">Réseau des Étudiants et Diplômés en Électronique à l'INP-HB de Yamoussoukro</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Secrétaire à la communication</h3>
-                    <p style="color: var(--accent);">Depuis Septembre 2025</p>
-                    <p style="color: var(--text-secondary);">Association des Polytechniciens de Bouaké (APOLYB)</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Chef projet et Innovation</h3>
-                    <p style="color: var(--accent);">Depuis Février 2025</p>
-                    <p style="color: var(--text-secondary);">Association des Étudiants et Diplômés en DUT Électronique INP-HB</p>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <h3>Bénévole de la commission projet</h3>
-                    <p style="color: var(--accent);">Février 2025</p>
-                    <p style="color: var(--text-secondary);">Semaine de l'Industrie</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOCUMENTS -->
-    <section id="documents">
-        <div class="container">
-            <h2 class="section-title fade-in">Documents & Attestations</h2>
-            <div class="documents-grid">
-                <div class="doc-card fade-in">
-                    <i class="fas fa-file-pdf" style="font-size: 3rem; color: #e11d48; margin-bottom: 1rem;"></i>
-                    <h3>CV Complet</h3>
-                    <p style="color: var(--text-secondary);">2026</p>
-                    <div style="display: flex; gap: 10px; margin-top: 1rem;"><a href="assets/docs/KOFFI%20N'GUESSAN%20RAOUL.pdf" download class="btn btn-primary" style="flex: 1; padding: 10px 5px; font-size: 0.95rem; margin: 0;">FR</a><a href="assets/docs/KOFFI%20N'GUESSAN%20RAOUL%202.pdf" download class="btn btn-primary" style="flex: 1; padding: 10px 5px; font-size: 0.95rem; margin: 0;">EN</a></div>
-                </div>
-                <div class="doc-card fade-in">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: #eab308; margin-bottom: 1rem;"></i>
-                    <h3>Lettre de Recommandation</h3>
-                    <p style="color: var(--text-secondary);">Stage JPH - 2025</p>
-                    <a href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download class="btn btn-outline"
-                        style="margin-top: 1rem; width: 100%; margin-left: 0; display: block; box-sizing: border-box; text-align: center;">Télécharger</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title fade-in">Me Contacter</h2>
-            <div class="contact-form fade-in">
-                <!-- Le formulaire est maintenant fonctionnel via formsubmit.co -->
-                <form id="contactForm" action="https://formsubmit.co/nguessan.koffi24@inphb.ci" method="POST">
-                    <!-- Configuration FormSubmit (optionnel) -->
-                    <input type="hidden" name="_subject" value="Nouveau message depuis ton Portfolio !">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <input type="text" name="name" placeholder="Votre nom" required>
-                    <input type="email" name="email" placeholder="Votre email" required>
-                    <input type="text" name="sujet" placeholder="Sujet">
-                    <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">Envoyer le
-                        message</button>
-                </form>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <p><strong>Email :</strong> <a href="mailto:nguessan.koffi24@inphb.ci"
-                        style="color: var(--accent); text-decoration: none;">nguessan.koffi24@inphb.ci</a></p>
-                <p><strong>Téléphone / WhatsApp :</strong> <a href="https://wa.me/2250779553055" target="_blank"
-                        style="color: var(--accent); text-decoration: none;">+225 0779553055 / 0566948377</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="social-links" style="margin-bottom: 2rem;">
-                <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Raoul-2003/gtch" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://wa.me/2250779553055" target="_blank" aria-label="WhatsApp"><i
-                        class="fab fa-whatsapp"></i></a>
-            </div>
-            <p>&copy; 2026 KOFFI N’GUESSAN RAOUL. Tous droits réservés.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Développé avec passion à
-                Yamoussoukro, Côte d'Ivoire</p>
-        </div>
+        <div class="container footer-bottom"><span>© 2026 KOFFI N'GUESSAN RAOUL. Tous droits réservés.</span><span>Conçu avec passion &amp; curiosité.</span></div>
     </footer>
 
-    <!-- MODAL GALLERY -->
-    <div id="projectModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="modal-close" onclick="fermerProjet()">&times;</span>
-            <h2 id="modalTitle" class="modal-title">Titre du Projet</h2>
-            <div id="modalGallery" class="gallery-grid">
-                <!-- Les images seront injectées ici -->
-            </div>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Revenir en haut"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-panel" role="document">
+            <button class="modal-close" id="modalClose" type="button" aria-label="Fermer la galerie"><i class="fa-solid fa-xmark"></i></button>
+            <p class="eyebrow">Aperçu du projet</p>
+            <h2 id="modalTitle">Projet</h2>
+            <div class="modal-gallery" id="modalGallery"></div>
         </div>
     </div>
 

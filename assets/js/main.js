@@ -1,194 +1,222 @@
+(() => {
+    "use strict";
 
-        // Navigation mobile
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+    document.documentElement.classList.add("js-ready");
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const backToTop = document.getElementById("backToTop");
+    const modal = document.getElementById("projectModal");
+    const modalClose = document.getElementById("modalClose");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalGallery = document.getElementById("modalGallery");
+    let lastFocusedElement = null;
+
+    const projectMedia = {
+        platforme: {
+            title: "Site de transfert Wave",
+            media: [
+                { type: "image", url: "assets/img/p1.jpg" },
+                { type: "image", url: "assets/img/p2.jpg" },
+                { type: "image", url: "assets/img/p3.jpg" },
+                { type: "image", url: "assets/img/p4.jpg" },
+                { type: "image", url: "assets/img/p5.jpg" },
+                { type: "image", url: "assets/img/p6.jpg" }
+            ]
+        },
+        caddy: {
+            title: "Caddie intelligent",
+            media: [{ type: "image", url: "assets/img/project_caddy.png" }]
+        },
+        poubelle: {
+            title: "Poubelle intelligente",
+            media: [
+                { type: "video", url: "assets/videos/v1.mp4" },
+                { type: "video", url: "assets/videos/v2.mp4" }
+            ]
+        },
+        energy: {
+            title: "Supervision & contrôle énergétique",
+            media: [{ type: "image", url: "assets/img/project_energy.png" }]
+        },
+        raspberry: {
+            title: "Projet Raspberry Pi",
+            media: [
+                { type: "image", url: "assets/img/r1.jpg" },
+                { type: "image", url: "assets/img/r2.jpg" },
+                { type: "image", url: "assets/img/r3.jpg" },
+                { type: "image", url: "assets/img/r4.jpg" },
+                { type: "image", url: "assets/img/r5.jpg" }
+            ]
+        },
+        telecom: {
+            title: "Simulation de réseau informatique",
+            media: [
+                { type: "image", url: "assets/img/sim_1.png" },
+                { type: "image", url: "assets/img/sim_2.png" }
+            ]
+        },
+        gnote: {
+            title: "Gestion d'étudiant de l'ESI",
+            media: [{ type: "image", url: "assets/img/project_gnote.png" }]
+        },
+        supert: {
+            title: "Application SuperGest",
+            media: [{ type: "image", url: "assets/img/project_supert.png" }]
+        }
+    };
+
+    function updateHeader() {
+        const pastHero = window.scrollY > 25;
+        header.classList.toggle("is-scrolled", pastHero);
+        backToTop.classList.toggle("is-visible", window.scrollY > 560);
+    }
+
+    function setMenu(open) {
+        mobileMenu.hidden = !open;
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+        menuToggle.innerHTML = `<i class="fa-solid fa-${open ? "xmark" : "bars"}"></i>`;
+    }
+
+    function openProject(projectId, trigger) {
+        const project = projectMedia[projectId];
+        if (!project) return;
+
+        lastFocusedElement = trigger || document.activeElement;
+        modalTitle.textContent = project.title;
+        modalGallery.replaceChildren();
+
+        project.media.forEach((item, index) => {
+            if (item.type === "image") {
+                const image = document.createElement("img");
+                image.src = item.url;
+                image.alt = `${project.title} — aperçu ${index + 1}`;
+                image.loading = "lazy";
+                modalGallery.appendChild(image);
+                return;
+            }
+
+            const video = document.createElement("video");
+            video.src = item.url;
+            video.controls = true;
+            video.preload = "metadata";
+            video.setAttribute("aria-label", `${project.title} — vidéo ${index + 1}`);
+            modalGallery.appendChild(video);
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        modalClose.focus();
+    }
 
-                    // Fermer le menu mobile si ouvert
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                    }
+    function closeProject() {
+        if (!modal.classList.contains("is-open")) return;
 
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+        modalGallery.querySelectorAll("video").forEach((video) => video.pause());
+        modalGallery.replaceChildren();
 
-        // Animation au scroll
-        function handleScroll() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= window.innerHeight * 0.85) {
-                    el.classList.add('visible');
-                }
-            });
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus();
+        }
+    }
+
+    function animateCounter(counter) {
+        const target = Number(counter.dataset.counter || 0);
+        const duration = 900;
+        const startedAt = performance.now();
+
+        function tick(now) {
+            const progress = Math.min((now - startedAt) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counter.textContent = String(Math.round(target * eased));
+            if (progress < 1) requestAnimationFrame(tick);
         }
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', () => {
-            handleScroll();
-        });
+        requestAnimationFrame(tick);
+    }
 
-        // Formulaire (maintenant natif via FormSubmit)
-        // L'envoi du formulaire est gÃ©rÃ© automatiquement par formsubmit.co
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
 
-        // (La fonction downloadCV a Ã©tÃ© supprimÃ©e au profit des liens HTML 'download' natifs)
+    menuToggle.addEventListener("click", () => setMenu(mobileMenu.hidden));
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
+    });
 
-        // Clavier ESC pour fermer menu mobile
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape" && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-        // Filtrage des projets
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+    document.querySelectorAll("[data-project]").forEach((button) => {
+        button.addEventListener("click", () => openProject(button.dataset.project, button));
+    });
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+    modalClose.addEventListener("click", closeProject);
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeProject();
+    });
 
-                const filter = btn.getAttribute('data-filter');
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            if (!mobileMenu.hidden) setMenu(false);
+            closeProject();
+        }
+    });
 
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => card.style.opacity = '1', 50);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => card.style.display = 'none', 300);
-                    }
-                });
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const projectCards = document.querySelectorAll(".project-card");
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+            filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+            projectCards.forEach((card) => {
+                card.hidden = filter !== "all" && card.dataset.category !== filter;
             });
         });
+    });
 
-        // --- GESTION DE LA MODALE PROJETS ---
-        const projetsData = {
-            'platforme': {
-                titre: "Site de transfert Wave",
-                medias: [
-                    { type: 'image', url: 'assets/img/p1.jpg' },
-                    { type: 'image', url: 'assets/img/p2.jpg' },
-                    { type: 'image', url: 'assets/img/p3.jpg' },
-                    { type: 'image', url: 'assets/img/p4.jpg' },
-                    { type: 'image', url: 'assets/img/p5.jpg' },
-                    { type: 'image', url: 'assets/img/p6.jpg' }
-                ]
-            },
-            'caddy': {
-                titre: "Caddie Intelligent",
-                medias: [
-                    { type: 'image', url: 'assets/img/project_caddy.png' }
-                ]
-            },
-            'poubelle': {
-                titre: "Poubelle Intelligente",
-                medias: [
-                    { type: 'video', url: 'assets/videos/v1.mp4' },
-                    { type: 'video', url: 'assets/videos/v2.mp4' }
-                ]
-            },
-            'energy': {
-                titre: "Supervision & Contrôle Énergétique",
-                medias: [
-                    { type: 'image', url: 'assets/img/project_energy.png' }
-                ]
-            },
-            'raspberry': {
-                titre: "Projet Raspberry Pi",
-                medias: [
-                    { type: 'image', url: 'assets/img/r1.jpg' },
-                    { type: 'image', url: 'assets/img/r2.jpg' },
-                    { type: 'image', url: 'assets/img/r3.jpg' },
-                    { type: 'image', url: 'assets/img/r4.jpg' },
-                    { type: 'image', url: 'assets/img/r5.jpg' }
-                ]
-            },
-            'telecom': {
-                titre: "Simulation de Réseau Informatique",
-                medias: [
-                    { type: 'image', url: 'assets/img/sim_1.png' },
-                    { type: 'image', url: 'assets/img/sim_2.png' }
-                ]
-            },
-            'gnote': {
-                titre: "Gestion d'Étudiant de l'ESI",
-                medias: [
-                    { type: 'image', url: 'assets/img/project_gnote.png' }
-                ]
-            },
-            'supert': {
-                titre: "Application SuperGest",
-                medias: [
-                    { type: 'image', url: 'assets/img/project_supert.png' }
-                ]
-            }
-        };
+    const revealElements = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -24px" });
+    revealElements.forEach((element) => revealObserver.observe(element));
 
-        const modal = document.getElementById('projectModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalGallery = document.getElementById('modalGallery');
+    const statsSection = document.querySelector(".stats-section");
+    let countersHaveRun = false;
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        if (!entries[0].isIntersecting || countersHaveRun) return;
+        countersHaveRun = true;
+        statsSection.querySelectorAll("[data-counter]").forEach(animateCounter);
+        observer.disconnect();
+    }, { threshold: 0.45 });
+    statsObserver.observe(statsSection);
 
-        function ouvrirProjet(id) {
-            const data = projetsData[id];
-            if (!data) return alert("MÃ©dias non disponibles pour ce projet.");
-
-            modalTitle.textContent = data.titre;
-            modalGallery.innerHTML = '';
-
-            data.medias.forEach(media => {
-                if (media.type === 'image') {
-                    const img = document.createElement('img');
-                    img.src = media.url;
-                    img.className = 'gallery-item';
-                    img.alt = 'Image du projet';
-                    modalGallery.appendChild(img);
-                } else if (media.type === 'video') {
-                    const video = document.createElement('video');
-                    video.src = media.url;
-                    video.className = 'gallery-video';
-                    video.controls = true;
-                    modalGallery.appendChild(video);
-                }
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".desktop-nav a");
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((link) => {
+                link.classList.toggle("is-current", link.getAttribute("href") === `#${entry.target.id}`);
             });
-
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function fermerProjet() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            modalGallery.innerHTML = ''; // Vide pour stopper les vidÃ©os
-        }
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) fermerProjet();
         });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+    sections.forEach((section) => navObserver.observe(section));
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape" && modal.classList.contains('active')) {
-                fermerProjet();
-            }
-        });
-
-        console.log("%câœ… Portfolio de KOFFI Nâ€™GUESSAN RAOUL chargÃ© avec succÃ¨s !", "color: #3B82F6; font-size: 14px; font-weight: bold");
-    
-
+    const contactForm = document.getElementById("contactForm");
+    const submitButton = document.getElementById("submitButton");
+    contactForm.addEventListener("submit", () => {
+        submitButton.disabled = true;
+        submitButton.innerHTML = "<span>Envoi en cours…</span><i class=\"fa-solid fa-spinner fa-spin\"></i>";
+    });
+})();
