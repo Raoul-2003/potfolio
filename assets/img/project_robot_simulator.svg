@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="background" x1="65" y1="20" x2="1125" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111324"/>
+      <stop offset="1" stop-color="#1B1930"/>
+    </linearGradient>
+    <linearGradient id="arm" x1="338" y1="467" x2="770" y2="185" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9B59"/>
+      <stop offset="1" stop-color="#FFCE76"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="831" y1="191" x2="1053" y2="536" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#282940"/>
+      <stop offset="1" stop-color="#201F32"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v700H0z"/>
+  <path d="M0 85h1200M0 155h1200M0 225h1200M0 295h1200M0 365h1200M0 435h1200M0 505h1200M0 575h1200M0 645h1200M75 0v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700m75-700v700" stroke="#A3A6C4" stroke-opacity=".07" stroke-width="2"/>
+  <circle cx="548" cy="459" r="280" stroke="#B6AECF" stroke-opacity=".18" stroke-width="2" stroke-dasharray="7 12"/>
+  <path d="M270 459h556M548 181v380" stroke="#A3A6C4" stroke-opacity=".32" stroke-width="2"/>
+  <path d="M548 459a176 176 0 0 1 125-168" stroke="#7C82CA" stroke-width="4" stroke-dasharray="9 10"/>
+  <path d="M548 459a249 249 0 0 0 191-90" stroke="#7C82CA" stroke-width="4" stroke-dasharray="9 10"/>
+  <path d="m534 198 14-17 14 17m247 248 17 13-17 15" stroke="#B7B8DA" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path d="m391 452 173-118 190-147" stroke="#070912" stroke-opacity=".38" stroke-linecap="round" stroke-width="46"/>
+  <path d="m391 452 173-118 190-147" stroke="url(#arm)" stroke-linecap="round" stroke-width="31"/>
+  <path d="M350 475 391 452l-9-47-51 8-20 42 39 20Z" fill="#29293D" stroke="#FFBE72" stroke-width="7"/>
+  <circle cx="391" cy="452" r="31" fill="#27273A" stroke="#FFBE72" stroke-width="9"/>
+  <circle cx="391" cy="452" r="9" fill="#FFE0A4"/>
+  <circle cx="564" cy="334" r="28" fill="#27273A" stroke="#FFBE72" stroke-width="9"/>
+  <circle cx="564" cy="334" r="8" fill="#FFE0A4"/>
+  <circle cx="754" cy="187" r="25" fill="#27273A" stroke="#FFBE72" stroke-width="8"/>
+  <path d="m772 172 42-19m-42 29 44 3m-54-16 5-44" stroke="#FFE0A4" stroke-linecap="round" stroke-width="7"/>
+  <path d="M320 500h170l38 29H283l37-29Z" fill="#36364D" stroke="#8D8DB3" stroke-width="4"/>
+  <path d="M338 529h133l17 21H321l17-21Z" fill="#202033" stroke="#676985" stroke-width="3"/>
+  <rect x="824" y="136" width="305" height="432" rx="24" fill="url(#panel)" stroke="#565675" stroke-width="2"/>
+  <rect x="853" y="166" width="247" height="55" rx="14" fill="#34344C"/>
+  <circle cx="879" cy="194" r="8" fill="#FFAA67"/>
+  <path d="M899 189h156M899 201h105" stroke="#C5C6DD" stroke-linecap="round" stroke-width="6" stroke-opacity=".7"/>
+  <rect x="853" y="245" width="247" height="131" rx="15" fill="#1B1B2C" stroke="#45455F"/>
+  <path d="M878 346h195M878 316h195M878 286h195" stroke="#A3A6C4" stroke-opacity=".14" stroke-width="2"/>
+  <path d="m881 338 47-18 42 7 37-57 43 24" stroke="#FFB569" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect x="853" y="399" width="112" height="135" rx="15" fill="#1B1B2C" stroke="#45455F"/>
+  <rect x="981" y="399" width="119" height="135" rx="15" fill="#1B1B2C" stroke="#45455F"/>
+  <circle cx="909" cy="451" r="28" stroke="#4D4D67" stroke-width="8"/>
+  <path d="M909 423a28 28 0 0 1 27 22" stroke="#83D6C0" stroke-linecap="round" stroke-width="8"/>
+  <path d="M900 481h18m-9-41v13" stroke="#D8D8EB" stroke-linecap="round" stroke-width="4"/>
+  <path d="m1008 493 17-28 15 15 18-34 20 47" stroke="#8EA6FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect x="84" y="77" width="254" height="53" rx="26" fill="#28273B" stroke="#575572"/>
+  <circle cx="112" cy="103" r="7" fill="#FF9B59"/>
+  <path d="M132 99h166m-166 10h120" stroke="#D7D5E8" stroke-linecap="round" stroke-width="6" stroke-opacity=".76"/>
+</svg>

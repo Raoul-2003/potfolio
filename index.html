@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de KOFFI N'GUESSAN RAOUL, technicien supérieur en électronique, informatique et télécommunications.">
+    <meta name="description" content="Portfolio de KOFFI N'GUESSAN RAOUL, étudiant TS EIT 3 à l'INP-HB : développement logiciel, systèmes, réseaux, IoT et intelligence artificielle.">
     <title>KOFFI N'GUESSAN RAOUL | Portfolio</title>
+    <meta name="theme-color" content="#070707">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KOFFI N'GUESSAN RAOUL | Portfolio">
+    <meta property="og:description" content="Étudiant TS EIT 3 à l'INP-HB — développement logiciel, systèmes, réseaux et IoT.">
     <link rel="shortcut icon" href="assets/img/image.jpeg" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,38 +19,41 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#accueil">Aller au contenu</a>
+    <a class="skip-link" href="#accueil" data-fr="Aller au contenu" data-en="Skip to content">Aller au contenu</a>
 
     <header class="site-header" id="siteHeader">
         <div class="container nav-shell">
-            <a class="brand" href="#accueil" aria-label="Accueil de Raoul">
+            <a class="brand" href="#accueil" aria-label="Accueil de Raoul" data-fr-aria-label="Accueil de Raoul" data-en-aria-label="Raoul's home">
                 <span class="brand-mark">R</span>AOUL<span class="brand-dot">.</span>
             </a>
 
-            <nav class="desktop-nav" aria-label="Navigation principale">
-                <a href="#accueil">Accueil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#competences">Compétences</a>
-                <a href="#experiences">Parcours</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
+            <nav class="desktop-nav" aria-label="Navigation principale" data-fr-aria-label="Navigation principale" data-en-aria-label="Main navigation">
+                <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+                <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+                <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+                <a href="#experiences" data-fr="Parcours" data-en="Experience">Parcours</a>
+                <a href="#formation" data-fr="Formation" data-en="Education">Formation</a>
+                <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+                <a href="#documents" data-fr="Documents" data-en="Documents">Documents</a>
+                <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
             </nav>
 
+            <button class="language-toggle" id="languageToggle" type="button" lang="en" aria-label="Switch to English" title="Switch to English">EN</button>
             <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <nav class="mobile-nav" id="mobileMenu" aria-label="Navigation mobile" hidden>
-            <a href="#accueil">Accueil</a>
-            <a href="#apropos">À propos</a>
-            <a href="#competences">Compétences</a>
-            <a href="#experiences">Parcours</a>
-            <a href="#formation">Formation</a>
-            <a href="#projets">Projets</a>
-            <a href="#associations">Engagement</a>
-            <a href="#documents">Documents</a>
-            <a href="#contact">Contact</a>
+        <nav class="mobile-nav" id="mobileMenu" aria-label="Navigation mobile" data-fr-aria-label="Navigation mobile" data-en-aria-label="Mobile navigation" hidden>
+            <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+            <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+            <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+            <a href="#experiences" data-fr="Parcours" data-en="Experience">Parcours</a>
+            <a href="#formation" data-fr="Formation" data-en="Education">Formation</a>
+            <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+            <a href="#associations" data-fr="Engagement" data-en="Community">Engagement</a>
+            <a href="#documents" data-fr="Documents" data-en="Documents">Documents</a>
+            <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
         </nav>
     </header>
 
@@ -56,28 +63,27 @@
             <div class="hero-glow hero-glow-two"></div>
             <div class="container hero-grid">
                 <div class="hero-copy reveal reveal-left">
-                    <p class="availability"><span></span> Disponible pour projets &amp; collaborations</p>
-                    <p class="eyebrow">Bonjour, je suis</p>
+                    <p class="eyebrow" data-fr="Bonjour, je suis" data-en="Hello, I'm">Bonjour, je suis</p>
                     <h1 class="gradient-text">KOFFI N'GUESSAN<br>RAOUL</h1>
-                    <p class="hero-role">Élève technicien supérieur en électronique, informatique &amp; télécommunications</p>
-                    <p class="hero-description">Je conçois des applications utiles et des systèmes intelligents, à la croisée du web, de l'IoT et des réseaux.</p>
+                    <p class="hero-role" data-fr="Étudiant en troisième année de Technicien Supérieur en Électronique, Informatique et Télécommunications (TS EIT 3)" data-en="Third-year Higher Technician student in Electronics, IT and Telecommunications (TS EIT 3)">Étudiant en troisième année de Technicien Supérieur en Électronique, Informatique et Télécommunications (TS EIT 3)</p>
+                    <p class="hero-description" data-fr="Je conçois des solutions numériques, du développement logiciel à l’administration des systèmes et réseaux, en passant par l’IoT et l’intelligence artificielle." data-en="I build digital solutions, from software development and systems and network administration to IoT and artificial intelligence.">Je conçois des solutions numériques, du développement logiciel à l’administration des systèmes et réseaux, en passant par l’IoT et l’intelligence artificielle.</p>
 
-                    <div class="hero-badges" aria-label="Domaines principaux">
-                        <span><i class="fa-solid fa-microchip"></i> Systèmes intelligents</span>
-                        <span><i class="fa-solid fa-code"></i> Développement web</span>
-                        <span><i class="fa-solid fa-network-wired"></i> Réseaux</span>
+                    <div class="hero-badges" aria-label="Domaines principaux" data-fr-aria-label="Domaines principaux" data-en-aria-label="Main areas">
+                        <span><i class="fa-solid fa-microchip"></i> <span data-fr="Systèmes intelligents" data-en="Intelligent systems">Systèmes intelligents</span></span>
+                        <span><i class="fa-solid fa-code"></i> <span data-fr="Développement logiciel" data-en="Software development">Développement logiciel</span></span>
+                        <span><i class="fa-solid fa-network-wired"></i> <span data-fr="Réseaux &amp; IoT" data-en="Networks &amp; IoT">Réseaux &amp; IoT</span></span>
                     </div>
 
                     <div class="hero-actions">
-                        <a class="button button-primary" href="#projets"><i class="fa-solid fa-grid-2"></i> Voir mes projets</a>
-                        <a class="button button-secondary" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL.pdf" download><i class="fa-solid fa-download"></i> CV français</a>
+                        <a class="button button-primary" href="#projets"><i class="fa-solid fa-grid-2"></i> <span data-fr="Voir mes projets" data-en="View my projects">Voir mes projets</span></a>
+                        <a class="button button-secondary" href="assets/docs/CV/CV_KOFFI_NGUESSAN_RAOUL_FR.pdf" download><i class="fa-solid fa-download"></i> <span data-fr="CV français" data-en="French résumé">CV français</span></a>
                     </div>
 
                     <div class="school-chip">
                         <img src="assets/img/inp.jpg" alt="Logo de l'INP-HB">
                         <div>
                             <strong>INP-HB</strong>
-                            <span>Institut National Polytechnique<br>Yamoussoukro, Côte d'Ivoire</span>
+                            <span data-fr="Institut National Polytechnique · Yamoussoukro, Côte d'Ivoire" data-en="National Polytechnic Institute · Yamoussoukro, Côte d’Ivoire">Institut National Polytechnique · Yamoussoukro, Côte d'Ivoire</span>
                         </div>
                     </div>
                 </div>
@@ -93,23 +99,23 @@
             </div>
         </section>
 
-        <section class="stats-section" aria-label="Quelques chiffres">
+        <section class="stats-section" aria-label="Quelques chiffres" data-fr-aria-label="Quelques chiffres" data-en-aria-label="At a glance">
             <div class="container stats-grid">
                 <article class="stat-card reveal">
-                    <strong><span data-counter="8">0</span>+</strong>
-                    <span>projets réalisés</span>
-                </article>
-                <article class="stat-card reveal">
-                    <strong><span data-counter="3">0</span></strong>
-                    <span>certifications IT</span>
-                </article>
-                <article class="stat-card reveal">
-                    <strong><span data-counter="2">0</span></strong>
-                    <span>expériences terrain</span>
+                    <strong><span data-counter="10">0</span></strong>
+                    <span data-fr="projets documentés" data-en="documented projects">projets documentés</span>
                 </article>
                 <article class="stat-card reveal">
                     <strong><span data-counter="4">0</span></strong>
-                    <span>engagements associatifs</span>
+                    <span data-fr="formations techniques" data-en="technical courses">formations techniques</span>
+                </article>
+                <article class="stat-card reveal">
+                    <strong><span data-counter="3">0</span></strong>
+                    <span data-fr="expériences professionnelles" data-en="professional experiences">expériences professionnelles</span>
+                </article>
+                <article class="stat-card reveal">
+                    <strong><span data-counter="4">0</span></strong>
+                    <span data-fr="engagements associatifs" data-en="community commitments">engagements associatifs</span>
                 </article>
             </div>
         </section>
@@ -117,8 +123,8 @@
         <section class="section" id="apropos">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Mon profil</p>
-                    <h2>À propos de moi</h2>
+                    <p class="eyebrow" data-fr="Mon profil" data-en="My profile">Mon profil</p>
+                    <h2 data-fr="À propos de moi" data-en="About me">À propos de moi</h2>
                     <span class="heading-line"></span>
                 </div>
 
@@ -129,26 +135,26 @@
                     </div>
 
                     <div class="about-copy reveal reveal-right">
-                        <p class="about-kicker">Étudiant motivé &amp; passionné</p>
-                        <h3>Transformer une idée en solution concrète.</h3>
-                        <p>Étudiant en électronique, informatique et télécommunications à l'INP-HB, je suis motivé, rigoureux et curieux. Je recherche des opportunités qui me permettront de renforcer mes compétences et de contribuer utilement à des projets ambitieux.</p>
-                        <p>Mon parcours me conduit naturellement vers le développement web, les systèmes embarqués, les réseaux et la conception de solutions intelligentes.</p>
+                        <p class="about-kicker" data-fr="Étudiant en TS EIT 3 · INP-HB" data-en="TS EIT 3 student · INP-HB">Étudiant en TS EIT 3 · INP-HB</p>
+                        <h3 data-fr="Concevoir des solutions utiles, du code aux réseaux." data-en="Building useful solutions, from code to networks.">Concevoir des solutions utiles, du code aux réseaux.</h3>
+                        <p data-fr="Étudiant en troisième année TS EIT à l’INP-HB pour l’année académique 2026–2027, je m’intéresse au développement logiciel, à l’administration des systèmes et réseaux et aux technologies connectées." data-en="A third-year TS EIT student at INP-HB for the 2026–2027 academic year, I focus on software development, systems and network administration, and connected technologies.">Étudiant en troisième année TS EIT à l’INP-HB pour l’année académique 2026–2027, je m’intéresse au développement logiciel, à l’administration des systèmes et réseaux et aux technologies connectées.</p>
+                        <p data-fr="Je développe des applications et des projets IoT, et explore l’intelligence artificielle pour imaginer des solutions numériques concrètes. Rigoureux et curieux, je souhaite continuer à apprendre et contribuer à des projets techniques." data-en="I develop applications and IoT projects, and explore artificial intelligence to create practical digital solutions. Curious and detail-oriented, I am eager to keep learning and contribute to technical projects.">Je développe des applications et des projets IoT, et explore l’intelligence artificielle pour imaginer des solutions numériques concrètes. Rigoureux et curieux, je souhaite continuer à apprendre et contribuer à des projets techniques.</p>
 
                         <div class="profile-tags">
-                            <span>Développement web</span>
-                            <span>IoT &amp; électronique</span>
-                            <span>Réseaux</span>
-                            <span>Innovation</span>
+                            <span data-fr="Développement logiciel" data-en="Software development">Développement logiciel</span>
+                            <span data-fr="Systèmes &amp; réseaux" data-en="Systems &amp; networks">Systèmes &amp; réseaux</span>
+                            <span data-fr="IoT" data-en="IoT">IoT</span>
+                            <span data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</span>
                         </div>
 
                         <div class="identity-grid">
-                            <a href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small>Email</small>nguessan.koffi24@inphb.ci</span></a>
-                            <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i><span><small>Téléphone</small>+225 07 79 55 30 55</span></a>
-                            <span><i class="fa-solid fa-flag"></i><span><small>Nationalité</small>Ivoirienne</span></span>
-                            <a href="https://potfolio-three-brown.vercel.app" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe"></i><span><small>Portfolio</small>Voir en ligne</span></a>
+                            <a href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small data-fr="E-mail" data-en="Email">E-mail</small>nguessan.koffi24@inphb.ci</span></a>
+                            <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i><span><small data-fr="Téléphone" data-en="Phone">Téléphone</small>+225 07 79 55 30 55</span></a>
+                            <span><i class="fa-solid fa-flag"></i><span><small data-fr="Nationalité" data-en="Nationality">Nationalité</small><span data-fr="Ivoirienne" data-en="Ivorian">Ivoirienne</span></span></span>
+                            <a href="https://potfolio-three-brown.vercel.app" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe"></i><span><small data-fr="Portfolio" data-en="Portfolio">Portfolio</small><span data-fr="Voir en ligne" data-en="View online">Voir en ligne</span></span></a>
                         </div>
 
-                        <a class="text-link" href="#contact">Échangeons sur votre projet <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="text-link" href="#contact"><span data-fr="Échangeons sur votre projet" data-en="Let's discuss your project">Échangeons sur votre projet</span> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -157,58 +163,66 @@
         <section class="section section-surface" id="competences">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Ce que je maîtrise</p>
-                    <h2>Compétences techniques</h2>
+                    <p class="eyebrow" data-fr="Mes connaissances" data-en="My skill set">Mes connaissances</p>
+                    <h2 data-fr="Compétences techniques" data-en="Technical skills">Compétences techniques</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="skills-grid">
                     <article class="skill-card reveal">
                         <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
-                        <h3>Électronique</h3>
-                        <p>Conception et programmation de systèmes connectés et automatisés.</p>
+                        <h3 data-fr="Développement logiciel" data-en="Software development">Développement logiciel</h3>
+                        <p data-fr="Concevoir des applications web et des solutions logicielles." data-en="Building web applications and software solutions.">Concevoir des applications web et des solutions logicielles.</p>
                         <ul>
-                            <li>Électronique programmable</li>
-                            <li>Internet des objets (IoT)</li>
-                            <li>Sécurité électronique</li>
-                            <li>Robotique &amp; automatismes</li>
-                            <li>Proteus (typon)</li>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>PHP, Java</li>
+                            <li>React.js, Angular</li>
+                            <li>Node.js, Express.js</li>
+                            <li>Python, Django</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3 data-fr="Données &amp; développement mobile" data-en="Data &amp; mobile development">Données &amp; développement mobile</h3>
+                        <p data-fr="Bases de données et découverte du développement mobile." data-en="Databases and hands-on mobile development.">Bases de données et découverte du développement mobile.</p>
+                        <ul>
+                            <li>MySQL, PostgreSQL, MongoDB</li>
+                            <li data-fr="Flutter (pratique)" data-en="Flutter (hands-on practice)">Flutter (pratique)</li>
                         </ul>
                     </article>
                     <article class="skill-card reveal">
                         <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3>Télécoms &amp; réseaux</h3>
-                        <p>Comprendre, déployer et maintenir les infrastructures réseau.</p>
+                        <h3 data-fr="Systèmes, réseaux &amp; IoT" data-en="Systems, networks &amp; IoT">Systèmes, réseaux &amp; IoT</h3>
+                        <p data-fr="Installer, administrer et connecter des systèmes informatiques." data-en="Installing, administering and connecting IT systems.">Installer, administrer et connecter des systèmes informatiques.</p>
                         <ul>
-                            <li>Réseaux informatiques</li>
-                            <li>Réseaux optiques</li>
-                            <li>Maintenance réseaux</li>
-                            <li>Simulation réseau</li>
+                            <li>Linux, Ubuntu, Kali Linux</li>
+                            <li>Ubuntu Server, Windows Server</li>
+                            <li data-fr="Configuration et administration des systèmes" data-en="System configuration and administration">Configuration et administration des systèmes</li>
+                            <li data-fr="Réseaux informatiques" data-en="Computer networks">Réseaux informatiques</li>
+                            <li data-fr="Réseaux optiques, maintenance et simulation réseau" data-en="Optical networks, maintenance and network simulation">Réseaux optiques, maintenance et simulation réseau</li>
+                            <li>IoT, électronique programmable, Proteus</li>
                         </ul>
                     </article>
                     <article class="skill-card reveal">
-                        <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h3>Informatique</h3>
-                        <p>Créer des applications web modernes, complètes et connectées.</p>
+                        <div class="skill-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <h3 data-fr="Outils &amp; apprentissages en cours" data-en="Tools &amp; ongoing learning">Outils &amp; apprentissages en cours</h3>
+                        <p data-fr="Formations en cours, distinctes des compétences déjà acquises." data-en="Ongoing courses, separate from established skills.">Formations en cours, distinctes des compétences déjà acquises.</p>
                         <ul>
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>PHP, MySQL, PostgreSQL</li>
-                            <li>React.js, Node.js, Angular</li>
-                            <li>Python &amp; Django</li>
-                            <li>Linux &amp; cloud</li>
-                            <li>Bootstrap</li>
+                            <li data-fr="Hadoop / MapReduce — cours en cours" data-en="Hadoop / MapReduce — currently studying">Hadoop / MapReduce — cours en cours</li>
+                            <li data-fr="AutoCAD électrique — formation en cours" data-en="Electrical AutoCAD — currently studying">AutoCAD électrique — formation en cours</li>
+                            <li data-fr="Outils déjà utilisés : Bootstrap, Vite, Tailwind CSS, Tkinter, Matplotlib, Pillow, FPDF / FPDI" data-en="Other tools used: Bootstrap, Vite, Tailwind CSS, Tkinter, Matplotlib, Pillow, FPDF / FPDI">Outils déjà utilisés : Bootstrap, Vite, Tailwind CSS, Tkinter, Matplotlib, Pillow, FPDF / FPDI</li>
                         </ul>
                     </article>
                     <article class="skill-card reveal">
                         <div class="skill-icon"><i class="fa-solid fa-user-group"></i></div>
-                        <h3>Qualités &amp; langues</h3>
-                        <p>Un profil technique qui s'appuie sur la collaboration et l'apprentissage continu.</p>
+                        <h3 data-fr="Qualités &amp; langues" data-en="Strengths &amp; languages">Qualités &amp; langues</h3>
+                        <p data-fr="Un profil technique qui s'appuie sur la collaboration et l'apprentissage continu." data-en="A technical profile grounded in collaboration and continuous learning.">Un profil technique qui s'appuie sur la collaboration et l'apprentissage continu.</p>
                         <ul>
-                            <li>Français : courant</li>
-                            <li>Anglais : A2, en progression</li>
-                            <li>Esprit d'équipe &amp; curiosité</li>
-                            <li>Résilience &amp; rigueur</li>
-                            <li>Loisirs : football, volleyball, musique, tourisme</li>
+                            <li data-fr="Français : courant" data-en="French: fluent">Français : courant</li>
+                            <li data-fr="Anglais : A2, en progression" data-en="English: A2, improving">Anglais : A2, en progression</li>
+                            <li data-fr="Esprit d'équipe &amp; curiosité" data-en="Teamwork &amp; curiosity">Esprit d'équipe &amp; curiosité</li>
+                            <li data-fr="Résilience &amp; rigueur" data-en="Resilience &amp; attention to detail">Résilience &amp; rigueur</li>
+                            <li data-fr="Loisirs : football, volleyball, musique, tourisme" data-en="Interests: football, volleyball, music, travel">Loisirs : football, volleyball, musique, tourisme</li>
                         </ul>
                     </article>
                 </div>
@@ -218,33 +232,48 @@
         <section class="section" id="experiences">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Apprendre sur le terrain</p>
-                    <h2>Expériences professionnelles</h2>
+                    <p class="eyebrow" data-fr="Apprendre sur le terrain" data-en="Learning on the job">Apprendre sur le terrain</p>
+                    <h2 data-fr="Expériences professionnelles" data-en="Professional experience">Expériences professionnelles</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="timeline">
                     <article class="timeline-item reveal reveal-left">
+                        <span class="timeline-marker"><i class="fa-solid fa-network-wired"></i></span>
+                        <div class="timeline-card">
+                            <p class="timeline-date" data-fr="03 août — 02 octobre 2026" data-en="August 3 — October 2, 2026">03 août — 02 octobre 2026</p>
+                            <h3>SOUTARAH GROUP</h3>
+                            <p class="timeline-role" data-fr="Stagiaire · Réseaux et systèmes informatiques" data-en="Intern · Computer networks and systems">Stagiaire · Réseaux et systèmes informatiques</p>
+                            <p><strong data-fr="Thème :" data-en="Project:">Thème :</strong> <span data-fr="étude, conception et mise en œuvre d'une infrastructure combinant réseau filaire, Wi-Fi et serveur." data-en="Study, design and deployment of an infrastructure combining a wired network, Wi-Fi and a server.">étude, conception et mise en œuvre d'une infrastructure combinant réseau filaire, Wi-Fi et serveur.</span></p>
+                            <ul>
+                                <li data-fr="Déploiement et organisation du réseau Ethernet." data-en="Deployed and organized the Ethernet network.">Déploiement et organisation du réseau Ethernet.</li>
+                                <li data-fr="Installation et configuration des équipements réseau et du Wi-Fi." data-en="Installed and configured network equipment and Wi-Fi.">Installation et configuration des équipements réseau et du Wi-Fi.</li>
+                                <li data-fr="Installation et configuration d'un serveur." data-en="Installed and configured a server.">Installation et configuration d'un serveur.</li>
+                                <li data-fr="Interconnexion des équipements et tests de communication." data-en="Connected equipment and tested communications.">Interconnexion des équipements et tests de communication.</li>
+                                <li data-fr="Réalisation du câblage et organisation des chemins de câbles." data-en="Completed cabling and organized cable routes.">Réalisation du câblage et organisation des chemins de câbles.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal reveal-left">
                         <span class="timeline-marker"><i class="fa-solid fa-briefcase"></i></span>
                         <div class="timeline-card">
-                            <p class="timeline-date">Juillet 2025 — Août 2025</p>
-                            <h3>Stage découverte · Mandigo SARL, Bouaké</h3>
-                            <p class="timeline-role">Rôle : développeur web</p>
-                            <p>Découverte d'un environnement professionnel de développement et participation à des activités liées à la création de solutions web.</p>
+                            <p class="timeline-date" data-fr="Juillet — août 2025" data-en="July — August 2025">Juillet — août 2025</p>
+                            <h3>MANDIGO SARL · Bouaké</h3>
+                            <p class="timeline-role" data-fr="Stage découverte en développement web" data-en="Introductory web development internship">Stage découverte en développement web</p>
+                            <p data-fr="Découverte d'un environnement professionnel de développement web." data-en="Gained an introduction to a professional web development environment.">Découverte d'un environnement professionnel de développement web.</p>
                         </div>
                     </article>
                     <article class="timeline-item timeline-item-right reveal reveal-right">
                         <span class="timeline-marker"><i class="fa-solid fa-screwdriver-wrench"></i></span>
                         <div class="timeline-card">
-                            <p class="timeline-date">Décembre 2023 — Janvier 2024</p>
-                            <h3>Stage de fin de cycle · JPH Électronique, Bouaké</h3>
-                            <p class="timeline-role">Rôle : aide maintenancier</p>
+                            <p class="timeline-date" data-fr="Décembre 2023 — janvier 2024" data-en="December 2023 — January 2024">Décembre 2023 — janvier 2024</p>
+                            <h3>JPH ÉLECTRONIQUE · Bouaké</h3>
+                            <p class="timeline-role" data-fr="Stage de fin de cycle · Assistance en maintenance électronique" data-en="Final-year internship · Electronic maintenance assistant">Stage de fin de cycle · Assistance en maintenance électronique</p>
                             <ul>
-                                <li>Maintenance des équipements électroniques</li>
-                                <li>Diagnostic et réparation de pannes</li>
-                                <li>Participation aux installations techniques</li>
+                                <li data-fr="Maintenance des équipements électroniques." data-en="Maintained electronic equipment.">Maintenance des équipements électroniques.</li>
+                                <li data-fr="Diagnostic et réparation de pannes." data-en="Diagnosed and repaired faults.">Diagnostic et réparation de pannes.</li>
+                                <li data-fr="Participation aux installations techniques." data-en="Assisted with technical installations.">Participation aux installations techniques.</li>
                             </ul>
-                            <a class="mini-link" href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download><i class="fa-solid fa-file-pdf"></i> Lettre de recommandation</a>
                         </div>
                     </article>
                 </div>
@@ -254,63 +283,76 @@
         <section class="section section-surface" id="formation">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Parcours académique</p>
-                    <h2>Formation &amp; certifications</h2>
+                    <p class="eyebrow" data-fr="Parcours académique" data-en="Academic background">Parcours académique</p>
+                    <h2 data-fr="Formation &amp; certifications" data-en="Education &amp; certifications">Formation &amp; certifications</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="education-highlight reveal">
-                    <img src="assets/img/inp.jpg" alt="Logo de l'INP-HB">
+                    <img src="assets/img/inp.jpg" alt="Logo de l'INP-HB" data-fr-alt="Logo de l'INP-HB" data-en-alt="INP-HB logo">
                     <div>
-                        <p>Établissement</p>
-                        <h3>Institut National Polytechnique Houphouët-Boigny</h3>
-                        <span><i class="fa-solid fa-location-dot"></i> Yamoussoukro, Côte d'Ivoire</span>
+                        <p data-fr="Établissement" data-en="Institution">Établissement</p>
+                        <h3 data-fr="Institut National Polytechnique Houphouët-Boigny" data-en="National Polytechnic Institute Félix Houphouët-Boigny">Institut National Polytechnique Houphouët-Boigny</h3>
+                        <span><i class="fa-solid fa-location-dot"></i> <span data-fr="Yamoussoukro, Côte d'Ivoire" data-en="Yamoussoukro, Côte d’Ivoire">Yamoussoukro, Côte d'Ivoire</span></span>
                     </div>
                 </div>
 
                 <div class="education-grid">
                     <article class="education-card reveal">
+                        <span>2026 — 2027</span>
+                        <h3 data-fr="3e année, Technicien Supérieur en Électronique, Informatique et Télécommunications (TS EIT 3)" data-en="Third year, Higher Technician in Electronics, IT and Telecommunications (TS EIT 3)">3e année, Technicien Supérieur en Électronique, Informatique et Télécommunications (TS EIT 3)</h3>
+                        <p data-fr="En cours · INP-HB." data-en="In progress · INP-HB.">En cours · INP-HB.</p>
+                    </article>
+                    <article class="education-card reveal">
                         <span>2025 — 2026</span>
-                        <h3>2e année, cycle Technicien Supérieur</h3>
-                        <p>Sciences et technologies de l'information et de la communication · spécialité électronique, informatique et télécommunications.</p>
+                        <h3 data-fr="2e année, cycle Technicien Supérieur" data-en="Second year, Higher Technician programme">2e année, cycle Technicien Supérieur</h3>
+                        <p data-fr="Sciences et technologies de l'information et de la communication · spécialité électronique, informatique et télécommunications · INP-HB." data-en="Information and Communication Sciences and Technologies · Electronics, IT and Telecommunications · INP-HB.">Sciences et technologies de l'information et de la communication · spécialité électronique, informatique et télécommunications · INP-HB.</p>
                     </article>
                     <article class="education-card reveal">
                         <span>2024 — 2025</span>
-                        <h3>Tronc commun STIC</h3>
-                        <p>Sciences et technologies de l'information et de la communication · INP-HB.</p>
+                        <h3 data-fr="Tronc commun STIC" data-en="Common core in Information and Communication Sciences and Technologies">Tronc commun STIC</h3>
+                        <p data-fr="Sciences et technologies de l'information et de la communication · INP-HB." data-en="Information and Communication Sciences and Technologies · INP-HB.">Sciences et technologies de l'information et de la communication · INP-HB.</p>
                     </article>
                     <article class="education-card reveal">
                         <span>Juin 2025</span>
-                        <h3>Attestation de formation Campus citoyen</h3>
-                        <p>Formation complémentaire axée sur l'engagement, la citoyenneté et la vie de campus.</p>
+                        <h3 data-fr="Attestation de formation Campus citoyen" data-en="Campus Citoyen training certificate">Attestation de formation Campus citoyen</h3>
+                        <p data-fr="Formation complémentaire sur l'engagement, la citoyenneté et la vie de campus." data-en="Additional training in civic engagement and campus life.">Formation complémentaire sur l'engagement, la citoyenneté et la vie de campus.</p>
                     </article>
                     <article class="education-card reveal">
                         <span>2023 — 2024</span>
-                        <h3>Brevet de Technicien en électronique</h3>
-                        <p>EPCT Bouaké · <strong>Lauréat régional</strong>.</p>
+                        <h3 data-fr="Brevet de Technicien en électronique" data-en="Electronics Technician Certificate">Brevet de Technicien en électronique</h3>
+                        <p>EPCT Bouaké · <strong data-fr="Lauréat régional" data-en="Regional laureate">Lauréat régional</strong>.</p>
                     </article>
                     <article class="education-card reveal">
                         <span>2019 — 2020</span>
                         <h3>BEPC</h3>
-                        <p>Lycée Mixte 1 de Yamoussoukro.</p>
+                        <p data-fr="Lycée Mixte 1 de Yamoussoukro." data-en="Lycée Mixte 1, Yamoussoukro.">Lycée Mixte 1 de Yamoussoukro.</p>
                     </article>
                 </div>
 
                 <div class="certificates-grid">
                     <article class="certificate-card reveal">
                         <i class="fa-solid fa-certificate"></i>
-                        <div><h3>Certificat IT</h3><p>Certification générale en informatique et technologies.</p></div>
-                        <a href="assets/docs/CERTIFICAT%20IT.pdf" download aria-label="Télécharger le certificat IT"><i class="fa-solid fa-arrow-down"></i></a>
+                        <div><h3>Certificat IT</h3><p data-fr="Certification générale en informatique et technologies." data-en="General certification in information technology.">Certification générale en informatique et technologies.</p></div>
+                        <a href="assets/docs/CERTIFICAT%20IT.pdf" download aria-label="Télécharger le certificat IT" data-fr-aria-label="Télécharger le certificat IT" data-en-aria-label="Download IT certificate"><i class="fa-solid fa-arrow-down"></i></a>
                     </article>
                     <article class="certificate-card reveal">
                         <i class="fa-solid fa-shield-halved"></i>
-                        <div><h3>Cybersecurity · Cisco</h3><p>Introduction to Cybersecurity par Cisco Networking Academy.</p></div>
-                        <a href="assets/docs/Introduction_to_Cybersecurity_certificate_nguessanraoul48-gmail-com_2ef65d7d-923b-4890-9194-5a4e20af4c1b.pdf" download aria-label="Télécharger le certificat Cybersecurity"><i class="fa-solid fa-arrow-down"></i></a>
+                        <div><h3>Cybersecurity · Cisco</h3><p data-fr="Introduction à la cybersécurité · Cisco Networking Academy." data-en="Introduction to Cybersecurity · Cisco Networking Academy.">Introduction à la cybersécurité · Cisco Networking Academy.</p></div>
+                        <a href="assets/docs/Introduction_to_Cybersecurity_certificate_nguessanraoul48-gmail-com_2ef65d7d-923b-4890-9194-5a4e20af4c1b.pdf" download aria-label="Télécharger le certificat Cybersecurity" data-fr-aria-label="Télécharger le certificat Cybersecurity" data-en-aria-label="Download Cybersecurity certificate"><i class="fa-solid fa-arrow-down"></i></a>
                     </article>
                     <article class="certificate-card reveal">
                         <i class="fa-solid fa-wifi"></i>
-                        <div><h3>IoT · Cisco</h3><p>Introduction to Internet of Things par Cisco Networking Academy.</p></div>
-                        <a href="assets/docs/Introduction_to_IoT_certificate_nguessanraoul48-gmail-com_f8501c94-6466-4e85-82ff-80dbaacdc49b.pdf" download aria-label="Télécharger le certificat IoT"><i class="fa-solid fa-arrow-down"></i></a>
+                        <div><h3>IoT · Cisco</h3><p data-fr="Introduction à l'Internet des objets · Cisco Networking Academy." data-en="Introduction to the Internet of Things · Cisco Networking Academy.">Introduction à l'Internet des objets · Cisco Networking Academy.</p></div>
+                        <a href="assets/docs/Introduction_to_IoT_certificate_nguessanraoul48-gmail-com_f8501c94-6466-4e85-82ff-80dbaacdc49b.pdf" download aria-label="Télécharger le certificat IoT" data-fr-aria-label="Télécharger le certificat IoT" data-en-aria-label="Download IoT certificate"><i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
+                    <article class="certificate-card reveal">
+                        <i class="fa-solid fa-cube"></i>
+                        <div>
+                            <h3 data-fr="Design &amp; Impression 3D : Débuter sereinement" data-en="3D Design &amp; Printing: Getting Started">Design &amp; Impression 3D : Débuter sereinement</h3>
+                            <p data-fr="FabLab Solidaire / Orange Digital Center · 02–04 novembre 2026." data-en="FabLab Solidaire / Orange Digital Center · November 2–4, 2026.">FabLab Solidaire / Orange Digital Center · 02–04 novembre 2026.</p>
+                        </div>
+                        <a href="assets/docs/Certificats/Attestation_FabLab_Orange_Digital_Center.pdf" target="_blank" rel="noreferrer" aria-label="Consulter l’attestation FabLab" data-fr-aria-label="Consulter l’attestation FabLab" data-en-aria-label="View FabLab certificate"><i class="fa-solid fa-file-pdf"></i></a>
                     </article>
                 </div>
             </div>
@@ -319,68 +361,35 @@
         <section class="section projects-section" id="projets">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Sélection de réalisations</p>
-                    <h2>Mes projets</h2>
+                    <p class="eyebrow" data-fr="Sélection de réalisations" data-en="Selected work">Sélection de réalisations</p>
+                    <h2 data-fr="Mes projets" data-en="My projects">Mes projets</h2>
                     <span class="heading-line"></span>
                 </div>
 
-                <div class="project-filters reveal" aria-label="Filtrer les projets">
-                    <button class="filter-button is-active" type="button" data-filter="all">Tous</button>
-                    <button class="filter-button" type="button" data-filter="elec">Électronique &amp; IoT</button>
-                    <button class="filter-button" type="button" data-filter="info">Informatique</button>
-                    <button class="filter-button" type="button" data-filter="telecom">Télécoms</button>
+                <div class="project-filters reveal" role="group" aria-label="Filtrer les projets" data-fr-aria-label="Filtrer les projets" data-en-aria-label="Filter projects">
+                    <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true" data-fr="Tous" data-en="All">Tous</button>
+                    <button class="filter-button" type="button" data-filter="innovation" aria-pressed="false" data-fr="IoT, IA &amp; innovation" data-en="IoT, AI &amp; innovation">IoT, IA &amp; innovation</button>
+                    <button class="filter-button" type="button" data-filter="web" aria-pressed="false" data-fr="Applications web &amp; gestion" data-en="Web apps &amp; management">Applications web &amp; gestion</button>
+                    <button class="filter-button" type="button" data-filter="robotics" aria-pressed="false" data-fr="Robotique &amp; simulation" data-en="Robotics &amp; simulation">Robotique &amp; simulation</button>
                 </div>
 
-                <div class="projects-grid">
-                    <article class="project-card reveal" data-category="elec">
-                        <div class="project-image"><img src="assets/img/project_caddy.png" alt="Caddie intelligent"><span class="project-category">Électronique &amp; IoT</span></div>
-                        <div class="project-body"><p class="project-date">Décembre 2025 — Juin 2026</p><h3>Caddie intelligent</h3><p>Chariot autonome avec détection d'objets et calcul du total.</p><div class="project-tech"><span>Arduino</span><span>Raspberry Pi</span><span>Capteurs</span></div><button class="project-link" type="button" data-project="caddy">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                    <article class="project-card reveal" data-category="info">
-                        <div class="project-image"><img src="assets/img/project_gnote.png" alt="Gestion d'étudiant de l'ESI"><span class="project-category">Informatique</span></div>
-                        <div class="project-body"><p class="project-date">Début 2026 — Mars 2026</p><h3>Gestion d'étudiant de l'ESI</h3><p>Plateforme de gestion scolaire et universitaire : notes, enseignants et administration.</p><div class="project-tech"><span>PHP</span><span>MySQL</span><span>CSS</span></div><div class="project-actions"><button class="project-link" type="button" data-project="gnote">Images</button><a class="project-link" href="https://gnote.gamer.gd" target="_blank" rel="noreferrer">Visiter <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
-                    </article>
-                    <article class="project-card reveal" data-category="info">
-                        <div class="project-image"><img src="assets/img/p3.jpg" alt="Site de transfert Wave"><span class="project-category">Informatique</span></div>
-                        <div class="project-body"><p class="project-date">Juillet 2025 — Août 2025</p><h3>Site de transfert Wave</h3><p>Site de transfert inspiré du modèle Wave, avec authentification et historique.</p><div class="project-tech"><span>HTML</span><span>JavaScript</span><span>PHP</span></div><button class="project-link" type="button" data-project="platforme">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                    <article class="project-card reveal" data-category="info">
-                        <div class="project-image"><img src="assets/img/project_energy.png" alt="Supervision et contrôle énergétique"><span class="project-category">Informatique</span></div>
-                        <div class="project-body"><p class="project-date">Mars 2025 — Juin 2025</p><h3>Supervision énergétique</h3><p>Tableau de bord web de supervision et de contrôle énergétique en temps réel.</p><div class="project-tech"><span>React.js</span><span>Node.js</span><span>Express</span></div><button class="project-link" type="button" data-project="energy">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                    <article class="project-card reveal" data-category="elec">
-                        <div class="project-image"><img src="assets/img/project_poubelle.png" alt="Poubelle intelligente"><span class="project-category">Électronique &amp; IoT</span></div>
-                        <div class="project-body"><p class="project-date">2024 — 2025</p><h3>Poubelle intelligente</h3><p>Système de tri automatique des déchets, équipé de capteurs et de notifications.</p><div class="project-tech"><span>Microcontrôleurs</span><span>Capteurs</span><span>IoT</span></div><button class="project-link" type="button" data-project="poubelle">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                    <article class="project-card reveal" data-category="info">
-                        <div class="project-image"><img src="assets/img/project_supert.png" alt="Application SuperGest"><span class="project-category">Informatique</span></div>
-                        <div class="project-body"><h3>Application SuperGest</h3><p>Système de gestion de stock, ventes et administration avec tableau de bord.</p><div class="project-tech"><span>PHP</span><span>PostgreSQL</span><span>JavaScript</span></div><div class="project-actions"><button class="project-link" type="button" data-project="supert">Images</button><a class="project-link" href="https://supert.page.gd" target="_blank" rel="noreferrer">Visiter <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
-                    </article>
-                    <article class="project-card reveal" data-category="telecom">
-                        <div class="project-image"><img src="assets/img/sim_1.png" alt="Simulation de réseau informatique"><span class="project-category">Télécoms</span></div>
-                        <div class="project-body"><h3>Simulation de réseau informatique</h3><p>Modélisation et simulation d'une architecture de réseau avec analyse de performance.</p><div class="project-tech"><span>Cisco Packet Tracer</span><span>Réseaux</span></div><button class="project-link" type="button" data-project="telecom">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                    <article class="project-card reveal" data-category="elec">
-                        <div class="project-image"><img src="assets/img/r1.jpg" alt="Projet Raspberry Pi"><span class="project-category">Électronique &amp; IoT</span></div>
-                        <div class="project-body"><h3>Projet Raspberry Pi</h3><p>Conception et réalisation d'un système intelligent basé sur Raspberry Pi.</p><div class="project-tech"><span>Raspberry Pi</span><span>Python</span><span>Électronique</span></div><button class="project-link" type="button" data-project="raspberry">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></button></div>
-                    </article>
-                </div>
+                <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
             </div>
         </section>
 
         <section class="section section-surface" id="associations">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Au-delà de la technique</p>
-                    <h2>Engagement &amp; leadership</h2>
+                    <p class="eyebrow" data-fr="Au-delà de la technique" data-en="Beyond technology">Au-delà de la technique</p>
+                    <h2 data-fr="Engagement &amp; leadership" data-en="Community &amp; leadership">Engagement &amp; leadership</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="engagement-grid">
-                    <article class="engagement-card reveal"><span>Depuis mars 2026</span><i class="fa-solid fa-bullhorn"></i><h3>Membre de la communication</h3><p>Réseau des étudiants et diplômés en électronique à l'INP-HB de Yamoussoukro.</p></article>
-                    <article class="engagement-card reveal"><span>Depuis septembre 2025</span><i class="fa-solid fa-people-group"></i><h3>Secrétaire à la communication</h3><p>Association des Polytechniciens de Bouaké (APOLYB).</p></article>
-                    <article class="engagement-card reveal"><span>Depuis février 2025</span><i class="fa-solid fa-lightbulb"></i><h3>Chef projet &amp; innovation</h3><p>Association des étudiants et diplômés en DUT électronique de l'INP-HB.</p></article>
-                    <article class="engagement-card reveal"><span>Février 2025</span><i class="fa-solid fa-handshake-angle"></i><h3>Bénévole · commission projet</h3><p>Participation à la Semaine de l'Industrie.</p></article>
+                    <article class="engagement-card reveal"><span data-fr="Depuis mars 2026" data-en="Since March 2026">Depuis mars 2026</span><i class="fa-solid fa-bullhorn"></i><h3 data-fr="Membre de la communication" data-en="Communications team member">Membre de la communication</h3><p data-fr="Réseau des étudiants et diplômés en électronique à l'INP-HB de Yamoussoukro." data-en="INP-HB electronics students and alumni network in Yamoussoukro.">Réseau des étudiants et diplômés en électronique à l'INP-HB de Yamoussoukro.</p></article>
+                    <article class="engagement-card reveal"><span data-fr="Depuis septembre 2025" data-en="Since September 2025">Depuis septembre 2025</span><i class="fa-solid fa-people-group"></i><h3 data-fr="Secrétaire à la communication" data-en="Communications secretary">Secrétaire à la communication</h3><p data-fr="Association des Polytechniciens de Bouaké (APOLYB)." data-en="Association of Polytechnicians of Bouaké (APOLYB).">Association des Polytechniciens de Bouaké (APOLYB).</p></article>
+                    <article class="engagement-card reveal"><span data-fr="Depuis février 2025" data-en="Since February 2025">Depuis février 2025</span><i class="fa-solid fa-lightbulb"></i><h3 data-fr="Chef de projet &amp; innovation" data-en="Project &amp; innovation lead">Chef de projet &amp; innovation</h3><p data-fr="Association des étudiants et diplômés en DUT électronique de l'INP-HB." data-en="INP-HB association of DUT electronics students and graduates.">Association des étudiants et diplômés en DUT électronique de l'INP-HB.</p></article>
+                    <article class="engagement-card reveal"><span>Février 2025</span><i class="fa-solid fa-handshake-angle"></i><h3 data-fr="Bénévole · commission projet" data-en="Volunteer · project committee">Bénévole · commission projet</h3><p data-fr="Participation à la Semaine de l'Industrie." data-en="Contributed to Industry Week.">Participation à la Semaine de l'Industrie.</p></article>
                 </div>
             </div>
         </section>
@@ -388,14 +397,22 @@
         <section class="section" id="documents">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">À télécharger</p>
-                    <h2>Documents &amp; attestations</h2>
+                    <p class="eyebrow" data-fr="À télécharger" data-en="Downloads">À télécharger</p>
+                    <h2 data-fr="Documents &amp; attestations" data-en="Documents &amp; certificates">Documents &amp; attestations</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="documents-grid">
-                    <article class="document-card reveal"><div class="document-icon"><i class="fa-solid fa-file-pdf"></i></div><p>Curriculum vitæ</p><h3>CV complet</h3><span>Version française ou anglaise</span><div><a class="button button-primary button-small" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL.pdf" download>FR</a><a class="button button-secondary button-small" href="assets/docs/KOFFI%20N%27GUESSAN%20RAOUL%202.pdf" download>EN</a></div></article>
-                    <article class="document-card reveal"><div class="document-icon document-icon-gold"><i class="fa-solid fa-award"></i></div><p>Stage JPH</p><h3>Lettre de recommandation</h3><span>Attestation professionnelle</span><a class="button button-secondary button-small" href="assets/docs/Lettre%20de%20recommandation%20de%20stage%20Raoul.pdf" download><i class="fa-solid fa-download"></i> Télécharger</a></article>
+                    <article class="document-card reveal">
+                        <div class="document-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <p data-fr="Curriculum vitæ" data-en="Résumé">Curriculum vitæ</p>
+                        <h3 data-fr="CV professionnel" data-en="Professional résumé">CV professionnel</h3>
+                        <span data-fr="Versions française et anglaise actualisées" data-en="Updated French and English versions">Versions française et anglaise actualisées</span>
+                        <div class="document-downloads">
+                            <a class="button button-primary button-small" href="assets/docs/CV/CV_KOFFI_NGUESSAN_RAOUL_FR.pdf" download><i class="fa-solid fa-download"></i> <span data-fr="Télécharger mon CV en français" data-en="Download my résumé in French">Télécharger mon CV en français</span></a>
+                            <a class="button button-secondary button-small" href="assets/docs/CV/CV_KOFFI_NGUESSAN_RAOUL_EN.pdf" download><i class="fa-solid fa-download"></i> <span data-fr="Télécharger mon CV en anglais" data-en="Download my résumé in English">Télécharger mon CV en anglais</span></a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -403,17 +420,17 @@
         <section class="section contact-section" id="contact">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Construisons quelque chose</p>
-                    <h2>Me contacter</h2>
+                    <p class="eyebrow" data-fr="Construisons quelque chose" data-en="Let's build something">Construisons quelque chose</p>
+                    <h2 data-fr="Me contacter" data-en="Get in touch">Me contacter</h2>
                     <span class="heading-line"></span>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-copy reveal reveal-left">
-                        <p class="contact-intro">Une idée, une opportunité ou un projet à réaliser ? Écrivez-moi. Je vous répondrai avec plaisir.</p>
-                        <a class="contact-item" href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small>Email</small>nguessan.koffi24@inphb.ci</span></a>
-                        <a class="contact-item" href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i><span><small>Téléphone / WhatsApp</small>+225 07 79 55 30 55 / 05 66 94 83 77</span></a>
-                        <span class="contact-item"><i class="fa-solid fa-location-dot"></i><span><small>Localisation</small>Yamoussoukro, Côte d'Ivoire</span></span>
+                        <p class="contact-intro" data-fr="Une idée, une opportunité ou un projet à réaliser ? Écrivez-moi. Je vous répondrai avec plaisir." data-en="Have an idea, an opportunity or a project in mind? Send me a message — I’d be happy to hear from you.">Une idée, une opportunité ou un projet à réaliser ? Écrivez-moi. Je vous répondrai avec plaisir.</p>
+                        <a class="contact-item" href="mailto:nguessan.koffi24@inphb.ci"><i class="fa-solid fa-envelope"></i><span><small data-fr="E-mail" data-en="Email">E-mail</small>nguessan.koffi24@inphb.ci</span></a>
+                        <a class="contact-item" href="https://wa.me/2250779553055" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i><span><small data-fr="Téléphone / WhatsApp" data-en="Phone / WhatsApp">Téléphone / WhatsApp</small>+225 07 79 55 30 55 / 05 85 72 24 72</span></a>
+                        <span class="contact-item"><i class="fa-solid fa-location-dot"></i><span><small data-fr="Localisation" data-en="Location">Localisation</small><span data-fr="Yamoussoukro, Côte d'Ivoire" data-en="Yamoussoukro, Côte d’Ivoire">Yamoussoukro, Côte d'Ivoire</span></span></span>
                         <div class="contact-socials">
                             <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://github.com/Raoul-2003/gtch" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -422,13 +439,13 @@
                     </div>
 
                     <form class="contact-form reveal reveal-right" id="contactForm" action="https://formsubmit.co/nguessan.koffi24@inphb.ci" method="POST">
-                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Raoul">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Raoul" data-fr-value="Nouveau message depuis le portfolio de Raoul" data-en-value="New message from Raoul's portfolio">
                         <input type="hidden" name="_captcha" value="false">
-                        <label>Votre nom<input type="text" name="name" placeholder="Votre nom" required></label>
-                        <label>Votre email<input type="email" name="email" placeholder="nom@exemple.com" required></label>
-                        <label>Sujet<input type="text" name="sujet" placeholder="De quoi souhaitez-vous parler ?"></label>
-                        <label>Votre message<textarea name="message" rows="5" placeholder="Écrivez votre message..." required></textarea></label>
-                        <button class="button button-primary" id="submitButton" type="submit"><span>Envoyer le message</span><i class="fa-solid fa-paper-plane"></i></button>
+                        <label><span data-fr="Votre nom" data-en="Your name">Votre nom</span><input type="text" name="name" placeholder="Votre nom" data-fr-placeholder="Votre nom" data-en-placeholder="Your name" required></label>
+                        <label><span data-fr="Votre e-mail" data-en="Your email">Votre e-mail</span><input type="email" name="email" placeholder="nom@exemple.com" data-fr-placeholder="nom@exemple.com" data-en-placeholder="name@example.com" required></label>
+                        <label><span data-fr="Sujet" data-en="Subject">Sujet</span><input type="text" name="sujet" placeholder="De quoi souhaitez-vous parler ?" data-fr-placeholder="De quoi souhaitez-vous parler ?" data-en-placeholder="What would you like to discuss?"></label>
+                        <label><span data-fr="Votre message" data-en="Your message">Votre message</span><textarea name="message" rows="5" placeholder="Écrivez votre message..." data-fr-placeholder="Écrivez votre message..." data-en-placeholder="Write your message..." required></textarea></label>
+                        <button class="button button-primary" id="submitButton" type="submit"><span data-fr="Envoyer le message" data-en="Send message">Envoyer le message</span><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -439,7 +456,7 @@
         <div class="container footer-grid">
             <div>
                 <a class="brand" href="#accueil"><span class="brand-mark">R</span>AOUL<span class="brand-dot">.</span></a>
-                <p>Technicien supérieur passionné par le web, les systèmes intelligents et l'innovation.</p>
+                <p data-fr="Étudiant TS EIT 3 à l'INP-HB, passionné par le développement logiciel, les réseaux et les systèmes intelligents." data-en="TS EIT 3 student at INP-HB, passionate about software development, networks and intelligent systems.">Étudiant TS EIT 3 à l'INP-HB, passionné par le développement logiciel, les réseaux et les systèmes intelligents.</p>
                 <div class="footer-socials">
                     <a href="https://www.linkedin.com/in/n-guessan-raoul" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://github.com/Raoul-2003/gtch" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -447,25 +464,25 @@
                 </div>
             </div>
             <div>
-                <h3>Navigation</h3>
-                <div class="footer-links"><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#experiences">Parcours</a><a href="#projets">Projets</a><a href="#documents">Documents</a><a href="#contact">Contact</a></div>
+                <h3 data-fr="Navigation" data-en="Navigation">Navigation</h3>
+                <div class="footer-links"><a href="#apropos" data-fr="À propos" data-en="About">À propos</a><a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a><a href="#experiences" data-fr="Parcours" data-en="Experience">Parcours</a><a href="#formation" data-fr="Formation" data-en="Education">Formation</a><a href="#projets" data-fr="Projets" data-en="Projects">Projets</a><a href="#documents" data-fr="Documents" data-en="Documents">Documents</a><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></div>
             </div>
             <div>
-                <h3>Me joindre</h3>
+                <h3 data-fr="Me joindre" data-en="Contact">Me joindre</h3>
                 <a href="mailto:nguessan.koffi24@inphb.ci">nguessan.koffi24@inphb.ci</a>
-                <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer">+225 07 79 55 30 55 / 05 66 94 83 77</a>
-                <p>Yamoussoukro, Côte d'Ivoire</p>
+                <a href="https://wa.me/2250779553055" target="_blank" rel="noreferrer">+225 07 79 55 30 55 / 05 85 72 24 72</a>
+                <p data-fr="Yamoussoukro, Côte d'Ivoire" data-en="Yamoussoukro, Côte d’Ivoire">Yamoussoukro, Côte d'Ivoire</p>
             </div>
         </div>
-        <div class="container footer-bottom"><span>© 2026 KOFFI N'GUESSAN RAOUL. Tous droits réservés.</span><span>Conçu avec passion &amp; curiosité.</span></div>
+        <div class="container footer-bottom"><span data-fr="© 2026 KOFFI N'GUESSAN RAOUL. Tous droits réservés." data-en="© 2026 KOFFI N'GUESSAN RAOUL. All rights reserved.">© 2026 KOFFI N'GUESSAN RAOUL. Tous droits réservés.</span><span data-fr="Conçu avec passion &amp; curiosité." data-en="Built with passion &amp; curiosity.">Conçu avec passion &amp; curiosité.</span></div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" type="button" aria-label="Revenir en haut"><i class="fa-solid fa-arrow-up"></i></button>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Revenir en haut" data-fr-aria-label="Revenir en haut" data-en-aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-panel" role="document">
-            <button class="modal-close" id="modalClose" type="button" aria-label="Fermer la galerie"><i class="fa-solid fa-xmark"></i></button>
-            <p class="eyebrow">Aperçu du projet</p>
+            <button class="modal-close" id="modalClose" type="button" aria-label="Fermer la galerie" data-fr-aria-label="Fermer la galerie" data-en-aria-label="Close gallery"><i class="fa-solid fa-xmark"></i></button>
+            <p class="eyebrow" data-fr="Aperçu du projet" data-en="Project preview">Aperçu du projet</p>
             <h2 id="modalTitle">Projet</h2>
             <div class="modal-gallery" id="modalGallery"></div>
         </div>
